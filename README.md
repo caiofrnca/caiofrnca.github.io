@@ -6,6 +6,6 @@
   
   Professional experience of over 8 years with exposure to the Telecommunications sector. Including design, configuration, execution, and management of connectivity solutions for enterprise level networks.
 
-Looking for an entry-level position at a great company to be a hard-working asset to any team, to learn, grow and develop long-term.
+  Looking for an entry-level position at a great company to be a hard-working asset to any team, to learn, grow and develop long-term.
 
 - 📫 How to reach me ... braga.caio@outlook.com
