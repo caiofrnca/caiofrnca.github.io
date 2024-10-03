@@ -4,7 +4,7 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[About](./about.md)   [About](./another-page.html)   [About](./another-page.html)   [About](./another-page.html)
+[About](./about.html)   [About](./another-page.html)   [About](./another-page.html)   [About](./another-page.html)
 
 There should be whitespace between paragraphs.
 
