@@ -6,12 +6,18 @@
 
 <h2>👨‍💻 Network and Cybersecurity Projects:</h2>
 
-- <b>Data Structures and Algorithms Practice (AlgoExpert)</b>
-  - [Praciting DS & Algos in Python](https://github.com/joshmadakor1/Algorithms-Practice)
+- <b>Secure Network & Infrastructure</b>
+  - [Design and Implementation using GNS3](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
+
+- <b>Security Frameworks</b>
+  - [Applying NIST CF Framework](https://github.com/joshmadakor1/Algorithms-Practice)
+
+- <b>GRC</b>
+  - [Security Audit (internal)](https://github.com/joshmadakor1/Algorithms-Practice)
 
 <h2>📺 YouTube Videos</h2>
 
-- [Network & Infrastructure Design and Implementation using GNS3](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
+- [Network & Infrastructure Design and Implementation using GNS3]()
 
 
 <h2> 🤳 Connect with me:</h2>
