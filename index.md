@@ -28,8 +28,8 @@ As a Network Engineer and IT support professional with over five years of experi
 
 ## 🤳 Connect with me:
 
-[![CaioFranca | LinkedIn](https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg)](https://www.linkedin.com/in/caiofranca/)
+[LinkedIn](https://www.linkedin.com/in/caiofranca/)
 
-[![CaioFranca | Email](https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg)](mailto:braga.caio@outlook.com.com)
+[Email](mailto:braga.caio@outlook.com.com)
 
 
