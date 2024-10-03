@@ -1,7 +1,7 @@
 <h1>Hi, I'm Caio! <br/><a href="https://www.linkedin.com/in/caiofranca/">Cybersecurity Professional</a></h1>
 
 <h2>🎓 Certifications: </h2>
- ![Logo]("C:\Users\User\OneDrive\Área de Trabalho\CompTIA Security+.png")
+   [Logo](C:\Users\User\OneDrive\Área de Trabalho\CompTIA Security+.png)
  - [CompTIA Security +](https://www.credly.com/badges/a33f25c3-faa1-4d63-8b89-a76751bed636)
  - [Google Cybersecurity Professional]()
   
