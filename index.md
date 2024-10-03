@@ -2,12 +2,9 @@
 layout: default
 ---
 
-[About](./about.md)   [About](./another-page.html)   [About](./another-page.html)   [About](./another-page.html)
-
-# Header 1
-
 # Hi, I'm Caio!  
-[Cybersecurity Professional](https://www.linkedin.com/in/caiofranca/)
+
+As a Network Engineer and IT support professional with over five years of experience, I have a solid foundation in network monitoring and incident response. My commitment to integrity, teamwork, and problem-solving enables me to tackle effectively security challenges with cross-functional teams. Keen on transitioning into a cybersecurity role, safeguarding critical infrastructure, data, and assets, and making a meaningful impact by helping organizations defend against security breaches and achieve long-term security goals.
 
 ## 🎓 Certifications:
 
@@ -31,7 +28,7 @@ layout: default
 
 ## 🤳 Connect with me:
 
-[![CaioFranca | LinkedIn](https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg)][linkedin]
-
+[linkedin] 
 [linkedin]: https://linkedin.com/in/caiofranca
+Email: braga.caio@outlook.com
 
