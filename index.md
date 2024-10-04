@@ -30,7 +30,7 @@ Keen to making a meaningful impact by helping defend against security breaches.
 
 <div style="display: flex; align-items: center;">
   <a href="mailto:braga.caio@outlook.com">
-    <img alt="CaioFranca | Email" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" />
+    <img alt="CaioFranca | Email" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" style="margin-right: 10px;" />
   </a>
   <a href="https://linkedin.com/in/caiofranca">
     <img alt="CaioFranca | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
