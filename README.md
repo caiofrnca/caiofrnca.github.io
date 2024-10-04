@@ -28,7 +28,3 @@
 [<img align="left" alt="CaioFranca | Email" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" />][email]
 
 [email]: mailto:braga.caio@outlook.com
-
-<h2>📺 Test </h2>
-
-!GitHub stars
