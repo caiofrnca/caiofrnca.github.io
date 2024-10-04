@@ -33,7 +33,7 @@ Keen to making a meaningful impact by helping defend against security breaches.
 </a>
 
 <a href="https://linkedin.com/in/caiofranca">
-  <img align="left" alt="CaioFranca | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
+  <img align="right" alt="CaioFranca | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
 </a>
 
 
