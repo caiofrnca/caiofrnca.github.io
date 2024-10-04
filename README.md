@@ -22,6 +22,9 @@
 <h2> 🤳 Connect with me:</h2>
 
 [<img align="left" alt="CaioFranca | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="YourName | Email" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" />][email]
+
 [linkedin]: https://linkedin.com/in/caiofranca
+
+[<img align="left" alt="CaioFranca | Email" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" />][email]
+
 [email]: mailto:braga.caio@outlook.com
