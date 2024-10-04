@@ -28,8 +28,12 @@ Keen to making a meaningful impact by helping defend against security breaches.
 
 ## 🤳 Connect with me:
 
-- [LinkedIn](https://www.linkedin.com/in/caiofranca/)
+<a href="mailto:braga.caio@outlook.com">
+  <img align="left" alt="Caio Franca | Email" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" />
+</a>
 
-- [Email](mailto:braga.caio@outlook.com.com)
+<a href="https://linkedin.com/in/caiofranca">
+  <img align="left" alt="CaioFranca | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
+</a>
 
 
