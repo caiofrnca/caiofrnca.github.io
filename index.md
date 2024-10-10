@@ -22,6 +22,7 @@ Keen to making a meaningful impact by helping defend against security breaches.
 - **Web Application Security**
 - **Cryptography**
 - **Endpoint Security**
+  - [Link to another page](./linux_file_permission.html).  
   - [Linux - File Permissions](https://github.com/caiofrnca/caiofrnca.github.io/blob/main/linux_file_permission.md)
 - **Identity and Access Management (IAM)**
 - **Cloud Security Labs**
