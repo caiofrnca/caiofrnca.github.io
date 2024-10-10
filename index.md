@@ -14,27 +14,19 @@ Keen to making a meaningful impact by helping defend against security breaches.
 ## 👨‍💻 Network and Cybersecurity Labs & Projects:
 
 - **Network Security Labs**
-  - [Design and Implementation using GNS3](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
-  - 
+  - [Design and Implementation using GNS3](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)  
 - **Security Frameworks**
   - [Applying NIST CF Framework](https://github.com/joshmadakor1/Algorithms-Practice)
-  - 
 - **GRC**
   - [Security Audit (internal)](https://github.com/joshmadakor1/Algorithms-Practice)
-  - 
 - **Web Application Security**
-- 
 - **Cryptography**
-- 
 - **Endpoint Security**
   - [Linux - File Permissions](https://github.com/joshmadakor1/Algorithms-Practice)
-  - 
 - **Identity and Access Management (IAM)**
-- 
 - **Cloud Security Labs**
-- 
 - **Penetration Testing Labs**
-  
+
 ## 🤳 Connect with me:
 
 <div style="display: flex; align-items: center;">
