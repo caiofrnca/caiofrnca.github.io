@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+# File Permissions in Linux
+
+## Project Description
+In this lab, I demonstrate the use of Linux commands to configure authorization. Authorization is crucial for granting access to specific system resources, ensuring that unauthorized users cannot access or modify sensitive files, which is vital to system security. In Linux, file and directory permissions are used to define who can access particular files and directories.
+
+As a security analyst, setting appropriate access permissions is essential to protecting sensitive information and maintaining the overall security of a system.
+
+---
+
+## Steps to Check File and Directory Details
+In this scenario, I examine and manage file permissions in the `/home/researcher2/projects` directory for the user **researcher2**, who is part of the **research_team** group. Using the command `ls -la`, I checked the permissions for all files in the directory, including hidden files, to ensure they align with proper authorization.
+
+1. First, I confirmed the current directory using `pwd`, then listed all directories using the `ls` command.
+2. Next, I accessed the **projects** directory (`cd projects`) and checked the permissions for all files, including hidden files, using `ls -la`.
+
+A dot (`.`) preceding a file or directory name indicates a hidden item. For example, in this folder, the file **.project_x.txt** is hidden.
+
+---
+
+## Understanding the Permissions String
+Each file or directory entry begins with a 10-character string indicating its permissions. For example, the string `drwxrwxrwx` represents a directory where the owner, group, and others have full permissions:
+
+- The **1st character** indicates the file type (`d` for directory, `-` for a regular file).
+- The **2nd-4th characters** represent the user’s permissions (read `r`, write `w`, execute `x`).
+- The **5th-7th characters** indicate the group’s permissions.
+- The **8th-10th characters** represent permissions for others.
+
+After checking permissions, I found that some files needed adjustment to meet security best practices.
+
+---
