@@ -5,7 +5,7 @@
  - [CompTIA Security +](https://www.credly.com/badges/a33f25c3-faa1-4d63-8b89-a76751bed636)
  - [Google Cybersecurity Professional]()
   
-<h2>👨‍💻 Network and Cybersecurity Projects:</h2>
+<h2>👨‍💻 Network and Cybersecurity Labs & Projects:</h2>
 
 - <b>Network Security Labs</b>
   - [Design and Implementation using GNS3](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
