@@ -11,21 +11,30 @@ Keen to making a meaningful impact by helping defend against security breaches.
 - [CompTIA Security +](https://www.credly.com/badges/a33f25c3-faa1-4d63-8b89-a76751bed636)
 - [Google Cybersecurity Professional]()
 
-## 👨‍💻 Network and Cybersecurity Projects:
+## 👨‍💻 Network and Cybersecurity Labs & Projects:
 
-- **Secure Network & Infrastructure**
+- **Network Security Labs**
   - [Design and Implementation using GNS3](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
-  
+  - 
 - **Security Frameworks**
   - [Applying NIST CF Framework](https://github.com/joshmadakor1/Algorithms-Practice)
-  
+  - 
 - **GRC**
   - [Security Audit (internal)](https://github.com/joshmadakor1/Algorithms-Practice)
-
-## 📺 YouTube Videos
-
-- [Network & Infrastructure Design and Implementation using GNS3]()
-
+  - 
+- **Web Application Security**
+- 
+- **Cryptography**
+- 
+- **Endpoint Security**
+  - [Linux - File Permissions](https://github.com/joshmadakor1/Algorithms-Practice)
+  - 
+- **Identity and Access Management (IAM)**
+- 
+- **Cloud Security Labs**
+- 
+- **Penetration Testing Labs**
+  
 ## 🤳 Connect with me:
 
 <div style="display: flex; align-items: center;">
