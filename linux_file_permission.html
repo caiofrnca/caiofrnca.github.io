@@ -2,38 +2,42 @@
 layout: default
 ---
 
-## Welcome to another page
 
-_yay_
+<h1>File Permissions in Linux</h1>
 
-# File Permissions in Linux
+<h2>Project Description</h2>
+<p>In this lab, I demonstrate the use of Linux commands to configure authorization. Authorization is crucial for granting access to specific system resources, ensuring that unauthorized users cannot access or modify sensitive files, which is vital to system security. In Linux, file and directory permissions are used to define who can access particular files and directories.</p>
 
-## Project Description
-In this lab, I demonstrate the use of Linux commands to configure authorization. Authorization is crucial for granting access to specific system resources, ensuring that unauthorized users cannot access or modify sensitive files, which is vital to system security. In Linux, file and directory permissions are used to define who can access particular files and directories.
+<p>As a security analyst, setting appropriate access permissions is essential to protecting sensitive information and maintaining the overall security of a system.</p>
 
-As a security analyst, setting appropriate access permissions is essential to protecting sensitive information and maintaining the overall security of a system.
+<hr>
 
----
+<h2>Steps to Check File and Directory Details</h2>
+<p>In this scenario, I examine and manage file permissions in the <code>/home/researcher2/projects</code> directory for the user <strong>researcher2</strong>, who is part of the <strong>research_team</strong> group. Using the command <code>ls -la</code>, I checked the permissions for all files in the directory, including hidden files, to ensure they align with proper authorization.</p>
 
-## Steps to Check File and Directory Details
-In this scenario, I examine and manage file permissions in the `/home/researcher2/projects` directory for the user **researcher2**, who is part of the **research_team** group. Using the command `ls -la`, I checked the permissions for all files in the directory, including hidden files, to ensure they align with proper authorization.
+<ol>
+  <li>First, I confirmed the current directory using <code>pwd</code>, then listed all directories using the <code>ls</code> command.</li>
+  <li>Next, I accessed the <strong>projects</strong> directory (<code>cd projects</code>) and checked the permissions for all files, including hidden files, using <code>ls -la</code>.</li>
+</ol>
 
-1. First, I confirmed the current directory using `pwd`, then listed all directories using the `ls` command.
-2. Next, I accessed the **projects** directory (`cd projects`) and checked the permissions for all files, including hidden files, using `ls -la`.
+<p>A dot (<code>.</code>) preceding a file or directory name indicates a hidden item. For example, in this folder, the file <strong>.project_x.txt</strong> is hidden.</p>
 
-A dot (`.`) preceding a file or directory name indicates a hidden item. For example, in this folder, the file **.project_x.txt** is hidden.
+<hr>
 
----
+<h2>Understanding the Permissions String</h2>
+<p>Each file or directory entry begins with a 10-character string indicating its permissions. For example, the string <code>drwxrwxrwx</code> represents a directory where the owner, group, and others have full permissions:</p>
 
-## Understanding the Permissions String
-Each file or directory entry begins with a 10-character string indicating its permissions. For example, the string `drwxrwxrwx` represents a directory where the owner, group, and others have full permissions:
+<ul>
+  <li>The <strong>1st character</strong> indicates the file type (<code>d</code> for directory, <code>-</code> for a regular file).</li>
+  <li>The <strong>2nd-4th characters</strong> represent the user’s permissions (read <code>r</code>, write <code>w</code>, execute <code>x</code>).</li>
+  <li>The <strong>5th-7th characters</strong> indicate the group’s permissions.</li>
+  <li>The <strong>8th-10th characters</strong> represent permissions for others.</li>
+</ul>
 
-- The **1st character** indicates the file type (`d` for directory, `-` for a regular file).
-- The **2nd-4th characters** represent the user’s permissions (read `r`, write `w`, execute `x`).
-- The **5th-7th characters** indicate the group’s permissions.
-- The **8th-10th characters** represent permissions for others.
+<p>After checking permissions, I found that some files needed adjustment to meet security best practices.</p>
 
-After checking permissions, I found that some files needed adjustment to meet security best practices.
+<hr>
+
 
 ---
 
