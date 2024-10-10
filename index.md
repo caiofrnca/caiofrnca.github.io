@@ -22,7 +22,7 @@ Keen to making a meaningful impact by helping defend against security breaches.
 - **Web Application Security**
 - **Cryptography**
 - **Endpoint Security**
-  - [Linux - File Permissions](https://github.com/joshmadakor1/Algorithms-Practice)
+  - [Linux - File Permissions](https://github.com/caiofrnca/caiofrnca.github.io/blob/main/linux_file_permission.md)
 - **Identity and Access Management (IAM)**
 - **Cloud Security Labs**
 - **Penetration Testing Labs**
