@@ -27,8 +27,9 @@ Keen to making a meaningful impact by helping defend against security breaches.
 - **Cloud Security Labs**
 - **Penetration Testing Labs**
 
-## 🤳 Connect with me:
 
+
+## 🤳 Connect with me:
 <div style="display: flex; align-items: center;">
   <a href="mailto:braga.caio@outlook.com">
     <img alt="CaioFranca | Email" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" style="margin-right: 10px;" />
