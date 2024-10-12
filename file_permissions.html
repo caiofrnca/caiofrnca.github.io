@@ -30,6 +30,10 @@ layout: default
 
     <ol>
         <li>First, I <strong>confirmed</strong> the current directory using <code>pwd</code> and <strong>listed</strong> all directories with the <code>ls</code> command.</li>
+        <br>
+  <div style="text-align: center;">  
+  <img src="./img/1Screenshot%202024-10-10%20184058.png" alt="Listing directories with pwd command" width="600">
+  </div>
         <li>Next, I <strong>accessed</strong> the <strong>projects</strong> directory (<code>cd projects</code>) and <strong>checked</strong> the permissions for all 
         files, including hidden ones, using <code>ls -la</code>.</li>
     </ol>
@@ -56,26 +60,49 @@ layout: default
     <blockquote>&gt;&gt; None of the files should allow other users to write to them.</blockquote>
 
     <p>To check the current permissions, I <strong>used</strong> the <code>ls -l</code> command.</p>
+    <br>
+  <div style="text-align: center;">  
+  <img src="./img/2Screenshot 2024-10-10 194156.png" alt="Listing directories with pwd command" width="600">
+  </div>
     <p>To remove write (<code>w</code>) permission for "others" (<code>o</code>), I <strong>executed</strong> the <code>chmod</code> command: 
     <code>chmod o-w project_k.txt</code>, where <code>o</code> <strong>refers</strong> to others (the last 3 characters in the string), and <code>-</code> 
     <strong>removes</strong> the write permission.</p>
+        <br>
+  <div style="text-align: center;">  
+  <img src="./img/3Screenshot 2024-10-10 194230.png" alt="Listing directories with pwd command" width="600">
+  </div>
 
     <h2>Changing File Permissions on a Hidden File</h2>
     <p>The file <code>.project_x.txt</code> <strong>is</strong> a hidden file that <strong>has been</strong> archived and <strong>should not</strong> be written to by 
     anyone. The user and group should still be able to read this file. To check the hidden file's permissions, I <strong>ran</strong> the 
     <code>ls -la</code> command.</p>
+            <br>
+  <div style="text-align: center;">  
+  <img src="./img/4Screenshot 2024-10-10 194322.png" alt="Listing directories with pwd command" width="600">
+  </div>
 
     <p>I <strong>observed</strong> that the hidden file <strong>.project_x.txt</strong> <strong>had</strong> write (<code>w</code>) permission for the user (1st instance) and 
     the group (2nd instance). To enforce read-only access, I <strong>removed</strong> the write permissions with the command: 
     <code>chmod u-w,g-w,g+r .project_x.txt</code>.</p>
+                <br>
+  <div style="text-align: center;">  
+  <img src="./img/5Screenshot 2024-10-10 194357.png" alt="Listing directories with pwd command" width="600">
+  </div>
 
     <h2>Modifying Directory Permissions</h2>
     <p>I also <strong>reviewed</strong> the permissions of the <code>/home/researcher2/projects/drafts</code> directory.</p>
 
     <blockquote>&gt;&gt; Only the <strong>researcher2</strong> user should have access.</blockquote>
+                    <br>
+  <div style="text-align: center;">  
+  <img src="./img/6Screenshot 2024-10-10 194431.png" alt="Listing directories with pwd command" width="600">
+  </div>
 
     <p>To ensure this, I <strong>adjusted</strong> the permissions to allow only execute (<code>x</code>) privileges for the user with the command: 
     <code>chmod g-x drafts</code>.</p>
+      <div style="text-align: center;">  
+  <img src="./img/7Screenshot 2024-10-10 194459.png" alt="Listing directories with pwd command" width="600">
+  </div>
 
     <h2>Summary</h2>
     <p>In this lab, I <strong>practiced</strong> fundamental Linux commands to:</p>
