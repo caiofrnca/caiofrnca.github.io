@@ -22,7 +22,7 @@ Keen to making a meaningful impact by helping defend against security breaches.
 - **Web Application Security**
 - **Cryptography**
 - **Endpoint Security**
-  - [Linux - File Permissions](./another.html)
+  - [Linux - File Permissions](./file_permissions.html)
 - **Identity and Access Management (IAM)**
 - **Cloud Security Labs**
 - **Penetration Testing Labs**
