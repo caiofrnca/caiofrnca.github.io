@@ -14,37 +14,37 @@ layout: default
     <h1>File Permissions in Linux</h1>
 
     <h2>Project Description</h2>
-    <p>In this lab, I <strong>demonstrated</strong> the use of Linux commands to configure file authorization. 
-    Authorization <strong>is</strong> essential for granting access to specific system resources, ensuring that unauthorized users 
-    <strong>cannot</strong> access or modify sensitive files, which <strong>is</strong> critical for system security. 
-    In Linux, file and directory permissions <strong>are used</strong> to define who can access particular files and directories.</p>
+    <p>In this lab, I demonstrated the use of Linux commands to configure file authorization. 
+    Authorization is essential for granting access to specific system resources, ensuring that unauthorized users 
+    cannot access or modify sensitive files, which is critical for system security. 
+    In Linux, file and directory permissions are used to define who can access particular files and directories.</p>
     
     <p>As a security analyst, setting appropriate access permissions <strong>is</strong> crucial to protecting sensitive 
     information and maintaining overall system security.</p>
 
     <h2>Steps to Check File and Directory Details</h2>
-    <p>In this scenario, I <strong>examined</strong> and <strong>managed</strong> file permissions in the <code>/home/researcher2/projects</code> directory 
-    for the user <strong>researcher2</strong>, who <strong>is</strong> part of the <strong>research_team</strong> group. 
-    By using the command <code>ls -la</code>, I <strong>verified</strong> the permissions for all files in the directory, 
-    including hidden files, to ensure they <strong>aligned</strong> with proper authorization practices.</p>
+    <p>In this scenario, I examined and managed file permissions in the <code>/home/researcher2/projects</code> directory 
+    for the user <strong>researcher2</strong>, who is part of the <strong>research_team</strong> group. 
+    By using the command <code>ls -la</code>, I verified the permissions for all files in the directory, 
+    including hidden files, to ensure they aligned with proper authorization practices.</p>
 
     <ol>
-        <li>First, I <strong>confirmed</strong> the current directory using <code>pwd</code> and <strong>listed</strong> all directories with the <code>ls</code> command.</li>
+        <li>First, I confirmed the current directory using <code>pwd</code> command and listed all directories with the <code>ls</code> command.</li>
         <br>
   <div style="text-align: center;">  
   <img src="./img/1Screenshot%202024-10-10%20184058.png" alt="Listing directories with pwd command" width="600">
   </div>
-        <li>Next, I <strong>accessed</strong> the <strong>projects</strong> directory (<code>cd projects</code>) and <strong>checked</strong> the permissions for all 
+        <li>Next, I accessed the <strong>projects</strong> directory (<code>cd projects</code>) and checked the permissions for all 
         files, including hidden ones, using <code>ls -la</code>.</li>
     </ol>
 
-    <p>A dot (<code>.</code>) preceding a file or directory name <strong>indicates</strong> a hidden item. For instance, in this folder, 
-    the file <strong>.project_x.txt</strong> <strong>is</strong> hidden.</p>
+    <p>A dot (<code>.</code>) preceding a file or directory name indicates a hidden item. For instance, in this folder, 
+    the file <strong>.project_x.txt</strong> is hidden.</p>
 
     <h2>Understanding the Permissions String</h2>
-    <p>Each file or directory entry <strong>starts</strong> with a 10-character string that <strong>indicates</strong> its permissions. 
-    For example, the string <code>drwxrwxrwx</code> <strong>represents</strong> a directory where the owner, group, 
-    and others <strong>have</strong> full permissions:</p>
+    <p>Each file or directory entry starts with a 10-character string that indicates its permissions. 
+    For example, the string <code>drwxrwxrwx</code> represents a directory where the owner, group, 
+    and others have full permissions:</p>
 
     <ul>
         <li>The <strong>1st character</strong> <strong>indicates</strong> the file type (<code>d</code> for directory, <code>-</code> for a regular file).</li>
@@ -54,35 +54,35 @@ layout: default
     </ul>
 
     <h2>Changing File Permissions</h2>
-    <p>In this task, I <strong>determined</strong> whether any files <strong>had</strong> incorrect permissions and <strong>modified</strong> them as necessary. 
-    This <strong>removed</strong> unauthorized access and <strong>enhanced</strong> the security of the system.</p>
+    <p>In this task, I determined whether any files had incorrect permissions and modified them as necessary. 
+    This action removed unauthorized access and enhanced the security of the system.</p>
     
     <blockquote>&gt;&gt; None of the files should allow other users to write to them.</blockquote>
 
-    <p>To check the current permissions, I <strong>used</strong> the <code>ls -l</code> command.</p>
+    <p>To check the current permissions, I used the <code>ls -l</code> command.</p>
     <br>
   <div style="text-align: center;">  
   <img src="./img/2Screenshot 2024-10-10 194156.png" alt="Listing directories with pwd command" width="600">
   </div>
-    <p>To remove write (<code>w</code>) permission for "others" (<code>o</code>), I <strong>executed</strong> the <code>chmod</code> command: 
-    <code>chmod o-w project_k.txt</code>, where <code>o</code> <strong>refers</strong> to others (the last 3 characters in the string), and <code>-</code> 
-    <strong>removes</strong> the write permission.</p>
+    <p>To remove write (<code>w</code>) permission for "others" (<code>o</code>), I executed the <code>chmod</code> command: 
+    <code>chmod o-w project_k.txt</code>, where <code>o</code> refers to others (the last 3 characters in the string), and <code>-</code> 
+    removes the write permission.</p>
         <br>
   <div style="text-align: center;">  
   <img src="./img/3Screenshot 2024-10-10 194230.png" alt="Listing directories with pwd command" width="600">
   </div>
 
     <h2>Changing File Permissions on a Hidden File</h2>
-    <p>The file <code>.project_x.txt</code> <strong>is</strong> a hidden file that <strong>has been</strong> archived and <strong>should not</strong> be written to by 
-    anyone. The user and group should still be able to read this file. To check the hidden file's permissions, I <strong>ran</strong> the 
+    <p>The file <code>.project_x.txt</code> is a hidden file that has been archived and should not be written to by 
+    anyone. The user and group should still be able to read this file. To check the hidden file's permissions, I ran the 
     <code>ls -la</code> command.</p>
             <br>
   <div style="text-align: center;">  
   <img src="./img/4Screenshot 2024-10-10 194322.png" alt="Listing directories with pwd command" width="600">
   </div>
 
-    <p>I <strong>observed</strong> that the hidden file <strong>.project_x.txt</strong> <strong>had</strong> write (<code>w</code>) permission for the user (1st instance) and 
-    the group (2nd instance). To enforce read-only access, I <strong>removed</strong> the write permissions with the command: 
+    <p>I observed that the hidden file <strong>.project_x.txt</strong> had write (<code>w</code>) permission for the user (1st instance) and 
+    the group (2nd instance). To enforce read-only access, I removed the write permissions with the command: 
     <code>chmod u-w,g-w,g+r .project_x.txt</code>.</p>
                 <br>
   <div style="text-align: center;">  
@@ -90,7 +90,7 @@ layout: default
   </div>
 
     <h2>Modifying Directory Permissions</h2>
-    <p>I also <strong>reviewed</strong> the permissions of the <code>/home/researcher2/projects/drafts</code> directory.</p>
+    <p>I also reviewed the permissions of the <code>/home/researcher2/projects/drafts</code> directory.</p>
 
     <blockquote>&gt;&gt; Only the <strong>researcher2</strong> user should have access.</blockquote>
                     <br>
@@ -98,21 +98,21 @@ layout: default
   <img src="./img/6Screenshot 2024-10-10 194431.png" alt="Listing directories with pwd command" width="600">
   </div>
 
-    <p>To ensure this, I <strong>adjusted</strong> the permissions to allow only execute (<code>x</code>) privileges for the user with the command: 
+    <p>To ensure this, I adjusted the permissions to allow only execute (<code>x</code>) privileges for the user with the command: 
     <code>chmod g-x drafts</code>.</p>
       <div style="text-align: center;">  
   <img src="./img/7Screenshot 2024-10-10 194459.png" alt="Listing directories with pwd command" width="600">
   </div>
 
     <h2>Summary</h2>
-    <p>In this lab, I <strong>practiced</strong> fundamental Linux commands to:</p>
+    <p>In this lab, I practiced fundamental Linux commands to:</p>
     <ul>
         <li><strong>Examine</strong> file and directory permissions,</li>
         <li><strong>Change</strong> file permissions, and</li>
         <li><strong>Secure</strong> directory permissions.</li>
     </ul>
 
-    <p>These exercises <strong>reinforced</strong> key concepts in securing Linux systems by managing access to sensitive resources.</p>
+    <p>These exercises reinforced key concepts in securing Linux systems by managing access to sensitive resources.</p>
 
     <p><a href="./">back</a></p>
 
