@@ -37,7 +37,7 @@ Keen to making a meaningful impact by helping defend against security breaches.
   <a href="https://linkedin.com/in/caiofranca">
     <img alt="CaioFranca | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" style="margin-right: 10px;" />
   </a>
-  <a href="https://github.com/caiofrnca">
+  <a href="">
     <img alt="YourName | GitHub" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" />
   </a>
 </div>
