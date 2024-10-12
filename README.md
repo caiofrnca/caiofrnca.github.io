@@ -10,13 +10,13 @@
 - <b>Network Security Labs</b>
   - [Design and Implementation using GNS3](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
 - <b>Security Frameworks</b>
-  - [Applying NIST CF Framework](https://github.com/joshmadakor1/Algorithms-Practice)
+  - [Applying NIST CF Framework](https://github.com/caiofrnca/caiofrnca.github.io)
 - <b>GRC</b>
-  - [Security Audit (internal)](https://github.com/joshmadakor1/Algorithms-Practice)
+  - [Security Audit (internal)](https://github.com/caiofrnca/caiofrnca.github.io)
 - <b>Web Application Security</b>
 - <b>Cryptography</b>
 - <b>Endpoint Security</b>
-  - [Linux - File Permissions](https://github.com/joshmadakor1/Algorithms-Practice)
+  - [Linux - File Permissions](https://github.com/caiofrnca/caiofrnca.github.io)
 - <b>Identity and Access Management (IAM)</b>
 - <b>Cloud Security Labs</b>
 - <b>Penetration Testing Labs</b>
