@@ -23,6 +23,7 @@ Keen to making a meaningful impact by helping defend against security breaches.
 - **Cryptography**
 - **Endpoint Security**
   - [Linux - File Permissions](./file_permissions.html)
+  - [SQL - Applying query filters](./sql_filters.html)
 - **Identity and Access Management (IAM)**
 - **Cloud Security Labs**
 - **Penetration Testing Labs**
