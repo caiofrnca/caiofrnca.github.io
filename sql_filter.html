@@ -1,3 +1,6 @@
+---
+layout: default
+---
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +22,9 @@
     <p>
         In this task, I investigated failed login attempts made after business hours by querying the login activity data. The <code>success</code> column, which contains boolean values (stored as 1 for TRUE and 0 for FALSE in MySQL), was used to identify whether the login attempts were successful or not.
     </p>
+      <div style="text-align: center;">  
+  <img src="./img/sql_filter/image1.png" alt="Listing directories with pwd command" width="600">
+  </div>
     <p>
         The query filtered for failed login attempts that took place after 18:00. I began by selecting all data from the <code>log_in_attempts</code> table. Then, I applied a WHERE clause combined with an AND operator to refine my results, ensuring that only unsuccessful login attempts after 18:00 were included. The first condition, <code>login_time &gt; '18:00'</code>, filters for attempts made after that time, while the second condition, <code>success = FALSE</code>, targets the failed login attempts.
     </p>
@@ -73,6 +79,8 @@
     <p>
         Throughout this lab, I demonstrated the use of SQL queries to address real-world scenarios by filtering data based on dates, times, patterns, and multiple conditions. I used the LIKE operator to search for patterns in office locations, and applied filters on date and time to retrieve login activities after hours. Additionally, I used AND, OR, and NOT to filter data based on department or country information, ensuring precise results for each scenario. These tasks highlighted my ability to extract meaningful data from large datasets, supporting security and IT operations.
     </p>
+
+    <p><a href="./">back</a></p>
 
 </body>
 </html>
