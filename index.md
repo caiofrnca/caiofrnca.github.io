@@ -14,7 +14,8 @@ Keen to making a meaningful impact by helping defend against security breaches.
 ## 👨‍💻 Network and Cybersecurity Projects:
 
 - **Network Security Labs**
-  - [Design and Implementation using GNS3](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)  
+  - [Design and Implementation using GNS3](./dpl_network.html)
+  - [Design and Implementation using GNS3 - Youtube Demo](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)    
 - **Security Frameworks**
   - [Applying NIST CF Framework]()
 - **GRC**
