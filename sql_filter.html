@@ -23,7 +23,7 @@ layout: default
         In this task, I investigated failed login attempts made after business hours by querying the login activity data. The <code>success</code> column, which contains boolean values (stored as 1 for TRUE and 0 for FALSE in MySQL), was used to identify whether the login attempts were successful or not.
     </p>
       <div style="text-align: center;">  
-  <img src="./img/sql_filter/image1.png" alt="Listing directories with pwd command" width="600">
+  <img src="./img/sql_filter/1.png" alt="Listing directories with pwd command" width="600">
   </div>
     <p>
         The query filtered for failed login attempts that took place after 18:00. I began by selecting all data from the <code>log_in_attempts</code> table. Then, I applied a WHERE clause combined with an AND operator to refine my results, ensuring that only unsuccessful login attempts after 18:00 were included. The first condition, <code>login_time &gt; '18:00'</code>, filters for attempts made after that time, while the second condition, <code>success = FALSE</code>, targets the failed login attempts.
@@ -40,6 +40,10 @@ layout: default
         <code>SELECT * FROM log_in_attempts WHERE login_date = '2022-05-09' OR login_date = '2022-05-08';</code>
     </p>
 
+          <div style="text-align: center;">  
+  <img src="./img/sql_filter/2.png" alt="Listing directories with pwd command" width="600">
+  </div>
+
     <h2>Task 3 - Retrieve Login Attempts Outside Specific Country</h2>
     <p>
         I investigated login attempts that did not originate in Mexico. The goal was to identify login attempts where the <code>country</code> field was not listed as 'MEX' or 'MEXICO'. The <code>country</code> field contained entries that either started with 'MEX' or were fully written as 'MEXICO'. To retrieve login attempts from other countries, I used the NOT and LIKE operators with the matching pattern 'MEX%'.
@@ -47,6 +51,10 @@ layout: default
     <p>
         <code>SELECT * FROM log_in_attempts WHERE NOT country LIKE 'MEX%';</code>
     </p>
+
+          <div style="text-align: center;">  
+  <img src="./img/sql_filter/3.png" alt="Listing directories with pwd command" width="600">
+  </div>
 
     <h2>Task 4 - Retrieve Employees in Specific Department</h2>
     <p>
@@ -59,6 +67,10 @@ layout: default
         <code>SELECT * FROM employees WHERE department = 'Marketing' AND office LIKE 'East%';</code>
     </p>
 
+          <div style="text-align: center;">  
+  <img src="./img/sql_filter/4.png" alt="Listing directories with pwd command" width="600">
+  </div>
+
     <h2>Task 5 - Retrieve Employees in Distinct Departments</h2>
     <p>
         I assisted in locating information on employees in the 'Finance' and 'Sales' departments to facilitate a computer update. Using the <code>employees</code> table, I wrote an SQL query to retrieve records for employees belonging to either the 'Finance' or 'Sales' department. The query used the OR operator to filter records based on the <code>department</code> column, ensuring that employees from both departments were included.
@@ -67,6 +79,10 @@ layout: default
         <code>SELECT * FROM employees WHERE department = 'Finance' OR department = 'Sales';</code>
     </p>
 
+          <div style="text-align: center;">  
+  <img src="./img/sql_filter/5.png" alt="Listing directories with pwd command" width="600">
+  </div>
+
     <h2>Task 6 - Retrieve All Employees Not in IT</h2>
     <p>
         Finally, I located employee information for those not in the 'Information Technology' department, as their computers still needed an update. Using the <code>employees</code> table, I wrote an SQL query to retrieve records for employees who were not part of the 'Information Technology' department. By applying the NOT operator to the <code>department</code> column, I filtered out employees from IT.
@@ -74,6 +90,10 @@ layout: default
     <p>
         <code>SELECT * FROM employees WHERE NOT department = 'Information Technology';</code>
     </p>
+
+          <div style="text-align: center;">  
+  <img src="./img/sql_filter/6.png" alt="Listing directories with pwd command" width="600">
+  </div>
 
     <h2>Summary</h2>
     <p>
