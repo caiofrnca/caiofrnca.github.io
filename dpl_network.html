@@ -1,51 +1,103 @@
 ---
 layout: default
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guided Technology Project: DPL Network Infrastructure</title>
+    <title>Network Infrastructure and Cybersecurity Project - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 3px solid #ccc;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-
-    <h1>Guided Technology Project: DPL Network Infrastructure</h1>
-
-    <h2>Abstract</h2>
-    <p>This project focuses on the design and implementation of a new network infrastructure for Dublin Pharmaceutical Limited (DPL), aimed at adapting the company's technology to meet its growth and expansion needs. The project ensures security, productivity, and cutting-edge communication solutions using modern technology.</p>
+    <h1>Network Infrastructure and Cybersecurity Project</h1>
 
     <h2>Project Overview</h2>
-    <p>DPL, a pharmaceutical company, required an overhaul of its IT infrastructure due to recent expansions. The project covered networking, cloud computing, and security to ensure seamless communication between branches and business partners, enhancing productivity and operational efficiency.</p>
+    <p>This project was developed to design and implement a modern network infrastructure and virtualization solution for Dublin Pharmaceutical Limited (DPL). As the company expanded to a new greenfield site, the focus was on ensuring secure communication, high availability, and optimized operations using advanced networking and virtualization technologies.</p>
 
     <h2>Objective</h2>
-    <p>The project aimed to build a resilient, high-performance network infrastructure capable of supporting DPL's future growth. It included high-availability network topology, virtualization, and security best practices, ensuring secure communication and business continuity.</p>
+    <p>The primary objective was to design and deploy an infrastructure capable of supporting high availability, fault tolerance, and secure inter-office and internet communication. This included network design, IP management, VoIP solutions, and implementation of security best practices such as firewall rules and VLAN segregation.</p>
 
     <h2>Key Technologies Used</h2>
     <ul>
-        <li><strong>Cisco Hierarchical Network Design</strong></li>
-        <li><strong>Virtual LANs (VLANs)</strong> for network segmentation</li>
-        <li><strong>Open Shortest Path First (OSPF)</strong> and <strong>Hot Standby Router Protocol (HSRP)</strong> for routing and fault tolerance</li>
-        <li><strong>CentOS</strong> for hosting key services such as DHCP, DNS, and web services</li>
-        <li><strong>Google Cloud Platform (GCP)</strong> for cloud-based backup and scalability</li>
+        <li><strong>Networking Models:</strong> TCP/IP and OSI layers, applied to ensure compatibility and communication across devices.</li>
+        <li><strong>Routing Protocols:</strong> OSPF (Open Shortest Path First) for WAN communication between the main office and partners.</li>
+        <li><strong>Hot Standby Router Protocol (HSRP):</strong> Used to provide redundancy and failover capability for critical paths in the network.</li>
+        <li><strong>VLANs:</strong> Virtual LANs were implemented to segregate network traffic for different departments and enhance security.</li>
+        <li><strong>VoIP:</strong> Voice over IP was implemented for efficient and cost-effective communication using Cisco devices.</li>
+        <li><strong>Virtualization:</strong> VirtualBox was used to virtualize CentOS servers, providing services such as DHCP, DNS, and SFTP.</li>
+        <li><strong>Google Cloud Platform (GCP):</strong> Cloud-based VM instances were set up to enhance disaster recovery and business continuity.</li>
     </ul>
 
-    <h2>Implementation Steps</h2>
-    <ol>
-        <li><strong>Network Topology</strong>: Design of a high-availability topology, utilizing VLANs to segment DPL's departments (Manufacturing, R&D, Sales).</li>
-        <li><strong>VoIP Implementation</strong>: Setup of VoIP communication using Cisco 2811 routers for a modern, cost-efficient communication system.</li>
-        <li><strong>Security Best Practices</strong>: Use of RADIUS for centralized authentication and encryption mechanisms to secure device management.</li>
-        <li><strong>Cloud Integration</strong>: Setup of virtual machines on Google Cloud to ensure redundancy and scalability, supporting business continuity.</li>
-    </ol>
+    <h2>Network Infrastructure Design</h2>
+    <p>The network followed a hierarchical design model based on Cisco's best practices. The key components include:</p>
+    <ul>
+        <li>Core switches providing high availability and routing for internal and external communications.</li>
+        <li>Access switches configured with VLANs for departmental segmentation (Manufacturing, R&D, Sales/Marketing).</li>
+        <li>Firewall rules for external communication filtering and internal network security.</li>
+    </ul>
+
+    <h3>VLAN Configuration</h3>
+    <p>To segment the network, VLANs were created for each department, ensuring secure communication within their broadcast domains. Trunk ports were used to allow multiple VLANs to pass through a single link.</p>
+    <pre>
+    vlan 10
+    name Manufacturing
+    vlan 20
+    name R&D
+    vlan 30
+    name Sales
+    </pre>
+
+    <h2>VoIP Implementation</h2>
+    <p>The VoIP system was deployed using a Cisco 2811 router, configured to handle IP telephony services. A dedicated voice VLAN (VLAN 50) was used for efficient communication between IP phones.</p>
+
+    <h2>Virtualization</h2>
+    <p>Virtualized services such as DHCP, DNS, and web services were deployed on CentOS virtual machines, both locally via VirtualBox and remotely via Google Cloud Platform (GCP).</p>
+    <p>Key services included:</p>
+    <ul>
+        <li><strong>DHCP:</strong> Automates IP allocation for internal devices.</li>
+        <li><strong>SFTP:</strong> Secure File Transfer Protocol service set up for secure file transfers.</li>
+        <li><strong>DNS:</strong> Domain Name Service providing name resolution for internal networks.</li>
+    </ul>
+
+    <h2>Security Best Practices</h2>
+    <p>Security was a major focus of this project. Key practices implemented include:</p>
+    <ul>
+        <li>RADIUS for centralized authentication and access control.</li>
+        <li>Password encryption on Cisco devices using <code>service password-encryption</code>.</li>
+        <li>Firewall rules to restrict traffic based on whitelist policies.</li>
+        <li>Regular security patch updates for both network devices and virtual machines.</li>
+    </ul>
 
     <h2>Testing and Evaluation</h2>
-    <p>The project was rigorously tested for connectivity, security, and performance using a layered approach based on the OSI model. Virtualization services and cloud-based backups were also thoroughly tested to ensure redundancy.</p>
+    <p>Network and system tests were conducted in phases to ensure all components functioned as expected. This included:</p>
+    <ul>
+        <li>Ping and traceroute tests to validate network connectivity.</li>
+        <li>VoIP call tests to confirm successful IP telephony deployment.</li>
+        <li>DHCP and DNS tests to verify IP address allocation and name resolution.</li>
+    </ul>
 
     <h2>Conclusion</h2>
-    <p>The DPL network infrastructure project successfully established a secure, scalable, and cost-efficient network, ensuring long-term sustainability and business growth.</p>
+    <p>This project successfully delivered a robust, secure, and scalable network infrastructure for DPL. The combination of advanced routing protocols, VLAN segmentation, VoIP services, and virtualization created a future-proof solution capable of supporting the company's growth.</p>
 
-    <p><a href="./">back</a></p>
-  
+<p><a href="./">back</a></p>
+    
 </body>
 </html>
