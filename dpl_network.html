@@ -6,7 +6,7 @@ layout: default
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Network Infrastructure and Cybersecurity Project - Portfolio</title>
+    <title>Network Infrastructure & Security Design and Implementation </title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,6 +31,7 @@ layout: default
 
     <h2>Project Overview</h2>
     <p>This project was developed to design and implement a modern network infrastructure and virtualization solution for Dublin Pharmaceutical Limited (DPL). As the company expanded to a new greenfield site, the focus was on ensuring secure communication, high availability, and optimized operations using advanced networking and virtualization technologies.</p>
+    <p>As this project is complex, I have not posted all the technical details here. If you are interested, please get in touch.</p>
 
     <h2>Objective</h2>
     <p>The primary objective was to design and deploy an infrastructure capable of supporting high availability, fault tolerance, and secure inter-office and internet communication. This included network design, IP management, VoIP solutions, and implementation of security best practices such as firewall rules and VLAN segregation.</p>
@@ -54,6 +55,10 @@ layout: default
         <li>Firewall rules for external communication filtering and internal network security.</li>
     </ul>
 
+              <div style="text-align: center;">  
+  <img src="./img/dpl_network/1.jpg" alt="Listing directories with pwd command" width="600">
+  </div>
+
     <h3>VLAN Configuration</h3>
     <p>To segment the network, VLANs were created for each department, ensuring secure communication within their broadcast domains. Trunk ports were used to allow multiple VLANs to pass through a single link.</p>
     <pre>
@@ -65,8 +70,16 @@ layout: default
     name Sales
     </pre>
 
+                  <div style="text-align: center;">  
+  <img src="./img/dpl_network/9.jpg" alt="Listing directories with pwd command" width="600">
+  </div>
+
     <h2>VoIP Implementation</h2>
     <p>The VoIP system was deployed using a Cisco 2811 router, configured to handle IP telephony services. A dedicated voice VLAN (VLAN 50) was used for efficient communication between IP phones.</p>
+
+                      <div style="text-align: center;">  
+  <img src="./img/dpl_network/16.jpg" alt="Listing directories with pwd command" width="600">
+  </div>
 
     <h2>Virtualization</h2>
     <p>Virtualized services such as DHCP, DNS, and web services were deployed on CentOS virtual machines, both locally via VirtualBox and remotely via Google Cloud Platform (GCP).</p>
@@ -77,6 +90,10 @@ layout: default
         <li><strong>DNS:</strong> Domain Name Service providing name resolution for internal networks.</li>
     </ul>
 
+                      <div style="text-align: center;">  
+  <img src="./img/dpl_network/5.jpg" alt="Listing directories with pwd command" width="600">
+  </div>
+
     <h2>Security Best Practices</h2>
     <p>Security was a major focus of this project. Key practices implemented include:</p>
     <ul>
@@ -86,6 +103,10 @@ layout: default
         <li>Regular security patch updates for both network devices and virtual machines.</li>
     </ul>
 
+                          <div style="text-align: center;">  
+  <img src="./img/dpl_network/4.jpg" alt="Listing directories with pwd command" width="600">
+  </div>
+
     <h2>Testing and Evaluation</h2>
     <p>Network and system tests were conducted in phases to ensure all components functioned as expected. This included:</p>
     <ul>
@@ -93,6 +114,10 @@ layout: default
         <li>VoIP call tests to confirm successful IP telephony deployment.</li>
         <li>DHCP and DNS tests to verify IP address allocation and name resolution.</li>
     </ul>
+
+                              <div style="text-align: center;">  
+  <img src="./img/dpl_network/17.jpg" alt="Listing directories with pwd command" width="600">
+  </div>
 
     <h2>Conclusion</h2>
     <p>This project successfully delivered a robust, secure, and scalable network infrastructure for DPL. The combination of advanced routing protocols, VLAN segmentation, VoIP services, and virtualization created a future-proof solution capable of supporting the company's growth.</p>
