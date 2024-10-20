@@ -47,10 +47,10 @@ layout: default
     I used the <code>ls</code> command to list the contents of the directory. Two files, <code>file1.txt</code> and <code>file2.txt</code>, were listed. Then, I used the <code>cat</code> command to display the contents of the <code>file1</code> and <code>file2</code>. That was the result:
 </p>
 
-<p>
-    <img src="1.png" alt="Output of cat command">
-</p>
-
+        <div style="text-align: center;">  
+  <img src="./img/hash_value/1.png" alt="Listing directories with pwd command" width="600">
+  </div>
+    
 <p>
     Although the contents of both files appeared identical when I used the <code>cat</code> command, I needed to generate the hash for each file to determine if the files were actually different.
 </p>
@@ -58,9 +58,9 @@ layout: default
     I used the <code>sha256sum</code> command to generate the hash of the files:
 </p>
 
-<p>
-    <img src="2.png" alt="Output of sha256sum command">
-</p>
+        <div style="text-align: center;">  
+  <img src="./img/hash_value/2.png" alt="Listing directories with pwd command" width="600">
+  </div>
 
 <p>
     I noticed that the generated hash value for <code>file1.txt</code> was different from the generated hash value for <code>file2.txt</code>, indicating that the file contents were not identical.
@@ -81,9 +81,9 @@ layout: default
     I used the <code>cmp</code> command to highlight the differences in the <code>file1hash</code> and <code>file2hash</code> files:
 </p>
 
-<p>
-    <img src="3.png" alt="Output of cmp command">
-</p>
+        <div style="text-align: center;">  
+  <img src="./img/hash_value/3.png" alt="Listing directories with pwd command" width="600">
+  </div>
 
 <p>
     The output of the <code>cmp</code> command indicated that the hashes differed at the first character in the first line, indicating that the contents of the two files were different because the hash values of each file were different.
