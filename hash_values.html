@@ -1,0 +1,106 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity: Create Hash Values</title>
+</head>
+<body>
+
+<h1>Activity: Create Hash Values</h1>
+
+<h2>Introduction</h2>
+<p>
+    Hash functions are used to uniquely identify the contents of a file so that we can check whether it has been modified. This code provides a unique identifier known as a hash value or digest.
+</p>
+<p>
+    In this lab, I created and evaluated the hash values for two files. I used Linux commands to calculate the hash of each file and observed any differences in the hashes produced. I then determined whether the files were the same or different.
+</p>
+
+<h2>Scenario</h2>
+<p>
+    In this scenario, I investigated whether two files were identical or different.
+</p>
+<p>
+    Here’s how I completed this task: First, I displayed the contents of the two files and created hashes for each file. Next, I examined the hashes and compared them.
+</p>
+
+<h2>Tasks:</h2>
+<ol>
+    <li>Listed the contents of the home directory.</li>
+    <li>Compared the plain text of the two files presented for hashing.</li>
+    <li>Computed the <code>sha256sum</code> hash of the two separate files.</li>
+    <li>Compared the hashes provided to identify the differences.</li>
+</ol>
+
+<h2>Task 1. Generate hashes for files</h2>
+<p>
+    The lab started in my home directory, <code>/home/analyst</code>, as the current working directory. This directory contained two files, <code>file1.txt</code> and <code>file2.txt</code>, which contained different data.
+</p>
+<p>
+    In this task, I displayed the contents of each of these files. I then generated a hash value for each file and sent the values to new files, which I used to examine the differences in these values later.
+</p>
+<p>
+    I used the <code>ls</code> command to list the contents of the directory. Two files, <code>file1.txt</code> and <code>file2.txt</code>, were listed. Then, I used the <code>cat</code> command to display the contents of the <code>file1</code> and <code>file2</code>. That was the result:
+</p>
+
+<p>
+    <img src="image1.png" alt="Output of cat command">
+</p>
+
+<p>
+    Although the contents of both files appeared identical when I used the <code>cat</code> command, I needed to generate the hash for each file to determine if the files were actually different.
+</p>
+<p>
+    I used the <code>sha256sum</code> command to generate the hash of the files:
+</p>
+
+<p>
+    <img src="image2.png" alt="Output of sha256sum command">
+</p>
+
+<p>
+    I noticed that the generated hash value for <code>file1.txt</code> was different from the generated hash value for <code>file2.txt</code>, indicating that the file contents were not identical.
+</p>
+
+<h2>Task 2. Compare hashes</h2>
+<p>
+    In this task, I wrote the hashes to two separate files and then compared them to find the differences.
+</p>
+<p>
+    I used the <code>sha256sum</code> command to generate the hash of the <code>file1.txt</code> and <code>file2.txt</code>, and sent the output to a new file called <code>file1hash</code> and <code>file2hash</code> respectively.
+</p>
+<p><strong>Note:</strong> Although the content in <code>file1.txt</code> and <code>file2.txt</code> previously appeared identical, the hashes written to the <code>file1hash</code> and <code>file2hash</code> files were completely different.</p>
+<p>
+    Next, I used the <code>cmp</code> command to compare the two files byte by byte. If a difference was found, the command reported the byte and line number where the first difference occurred.
+</p>
+<p>
+    I used the <code>cmp</code> command to highlight the differences in the <code>file1hash</code> and <code>file2hash</code> files:
+</p>
+
+<p>
+    <img src="image3.png" alt="Output of cmp command">
+</p>
+
+<p>
+    The output of the <code>cmp</code> command indicated that the hashes differed at the first character in the first line, indicating that the contents of the two files were different because the hash values of each file were different.
+</p>
+
+<h2>Conclusion</h2>
+<p>
+    These are valuable tools I can use to validate data integrity as I contribute to the control of any organization’s security.
+</p>
+<p>I practiced how to:</p>
+<ul>
+    <li>Compute hashes using <code>sha256sum</code></li>
+    <li>Display hashes using the <code>cat</code> command</li>
+    <li>Compare hashes using the <code>cmp</code> command</li>
+</ul>
+
+    <p><a href="./">back</a></p>
+
+</body>
+</html>
