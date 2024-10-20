@@ -50,6 +50,11 @@ layout: default
     <blockquote>
         "Hello, All of your data has been encrypted. To recover your data, you will need to solve a cipher. To get started, look for a hidden file in the caesar subdirectory."
     </blockquote>
+
+                          <div style="text-align: center;">  
+  <img src="./img/decrypt_msg/1.jpg" alt="Listing directories with pwd command" width="600">
+  </div>
+    
     <p>
         The message advised that the <code>caesar</code> subdirectory contains a hidden file, guiding the next step of the decryption process.
     </p>
@@ -61,11 +66,21 @@ layout: default
     <p>
         First, I navigated to the <code>caesar</code> subdirectory using the <code>cd</code> command. Then, I used the <code>ls -a</code> command to list all files, including hidden ones, and found the hidden file <code>.leftShift3</code>.
     </p>
+
+                          <div style="text-align: center;">  
+  <img src="./img/decrypt_msg/2.jpg" alt="Listing directories with pwd command" width="600">
+  </div>
+    
     <p>
         Hidden files in Linux are identified by names starting with a period (.). To decrypt the hidden file, I read its contents using the <code>cat</code> command. The message appeared scrambled, as it was encrypted using a Caesar cipher, with each letter shifted three positions to the left. To decrypt it, I used the <code>tr</code> command:
     </p>
     <pre><code>cat .leftShift3 | tr "d-za-cD-ZA-C" "a-zA-Z"</code></pre>
     <p>
+
+                          <div style="text-align: center;">  
+  <img src="./img/decrypt_msg/3.jpg" alt="Listing directories with pwd command" width="600">
+  </div>
+        
         The <code>tr</code> command translated each letter back to its original position, allowing me to decrypt the cipher and continue to the next step. I returned to the home directory to prepare for the next task.
     </p>
 
@@ -74,6 +89,11 @@ layout: default
         After solving the Caesar cipher, I used the command revealed in the <code>.leftShift3</code> file to decrypt the <code>Q1.encrypted</code> file and recover the hidden message. I executed the following command to decrypt the file:
     </p>
     <pre><code>openssl aes-256-cbc -pbkdf2 -a -d -in Q1.encrypted -out Q1.recovered -k ettubrute</code></pre>
+    
+                              <div style="text-align: center;">  
+  <img src="./img/decrypt_msg/4.jpg" alt="Listing directories with pwd command" width="600">
+  </div>
+    
     <p>
         This command used <code>openssl</code> to reverse the encryption with the AES-256-CBC cipher. The <code>-pbkdf2</code> option added security to the key, <code>-a</code> specified the output encoding, and <code>-d</code> indicated decryption. The <code>-in</code> and <code>-out</code> flags were used to specify the input and output files, while <code>-k</code> indicated the password, which in this case was <code>ettubrute</code>.
     </p>
