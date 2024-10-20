@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity: Decrypt an Encrypted Message</title>
+</head>
+<body>
+
+    <h1>Activity: Decrypt an Encrypted Message</h1>
+
+    <h2>Activity Overview</h2>
+    <p>
+        In this lab, I completed a series of tasks to decrypt an encrypted file, demonstrating the critical role of encryption in securing data in use, at rest, and in transit. Using my Linux skills, I uncovered clues needed to decode a classical cipher, restore a file, and reveal a hidden message, showcasing practical encryption techniques and their importance in safeguarding information.
+    </p>
+
+    <h2>Tasks</h2>
+    <ul>
+        <li>Listed the contents of a directory.</li>
+        <li>Read and analyzed the contents of files.</li>
+        <li>Used Linux commands to decode a classical cipher back to plaintext.</li>
+        <li>Decrypted an encrypted file and restored it to its original state.</li>
+    </ul>
+
+    <h2>Scenario</h2>
+    <p>
+        In this scenario, all files in my home directory were encrypted, requiring me to use Linux commands to break a Caesar cipher and decrypt the files to reveal hidden messages.
+    </p>
+    <p>
+        To complete this task, I first explored the contents of the home directory and read the contents of a file. Next, I discovered a hidden file and successfully decrypted the Caesar cipher within it. Finally, I decrypted the encrypted data file to recover the data and reveal the hidden message.
+    </p>
+
+    <h2>Task 1: Read the Contents of a File</h2>
+    <p>
+        The lab starts in my home directory, <code>/home/analyst</code>, as the current working directory. In this task, I explored the directory contents and read a file to obtain further instructions.
+    </p>
+    <p>
+        I used the <code>ls</code> command to list the files in the current directory. This revealed two files, <code>Q1.encrypted</code> and <code>README.txt</code>, as well as a subdirectory, <code>caesar</code>.
+    </p>
+    <p>
+        To proceed, I used the <code>cat</code> command to read the contents of the <code>README.txt</code> file:
+    </p>
+    <p>
+        The output provided a crucial message:
+    </p>
+    <blockquote>
+        "Hello, All of your data has been encrypted. To recover your data, you will need to solve a cipher. To get started, look for a hidden file in the caesar subdirectory."
+    </blockquote>
+    <p>
+        The message advised that the <code>caesar</code> subdirectory contains a hidden file, guiding the next step of the decryption process.
+    </p>
+
+    <h2>Task 2: Find a Hidden File</h2>
+    <p>
+        I needed to locate a hidden file in my home directory and decrypt the Caesar cipher it contained, enabling me to proceed with the next task.
+    </p>
+    <p>
+        First, I navigated to the <code>caesar</code> subdirectory using the <code>cd</code> command. Then, I used the <code>ls -a</code> command to list all files, including hidden ones, and found the hidden file <code>.leftShift3</code>.
+    </p>
+    <p>
+        Hidden files in Linux are identified by names starting with a period (.). To decrypt the hidden file, I read its contents using the <code>cat</code> command. The message appeared scrambled, as it was encrypted using a Caesar cipher, with each letter shifted three positions to the left. To decrypt it, I used the <code>tr</code> command:
+    </p>
+    <pre><code>cat .leftShift3 | tr "d-za-cD-ZA-C" "a-zA-Z"</code></pre>
+    <p>
+        The <code>tr</code> command translated each letter back to its original position, allowing me to decrypt the cipher and continue to the next step. I returned to the home directory to prepare for the next task.
+    </p>
+
+    <h2>Task 3: Decrypt a File</h2>
+    <p>
+        After solving the Caesar cipher, I used the command revealed in the <code>.leftShift3</code> file to decrypt the <code>Q1.encrypted</code> file and recover the hidden message. I executed the following command to decrypt the file:
+    </p>
+    <pre><code>openssl aes-256-cbc -pbkdf2 -a -d -in Q1.encrypted -out Q1.recovered -k ettubrute</code></pre>
+    <p>
+        This command used <code>openssl</code> to reverse the encryption with the AES-256-CBC cipher. The <code>-pbkdf2</code> option added security to the key, <code>-a</code> specified the output encoding, and <code>-d</code> indicated decryption. The <code>-in</code> and <code>-out</code> flags were used to specify the input and output files, while <code>-k</code> indicated the password, which in this case was <code>ettubrute</code>.
+    </p>
+    <p>
+        After decrypting the file, I used the <code>ls</code> command to list the contents of the directory. The newly decrypted file, <code>Q1.recovered</code>, was displayed. The output revealed:
+    </p>
+    <blockquote>
+        "If you are able to read this, then you have successfully decrypted the classic cipher text. You recovered the encryption key that was used to encrypt this file. Great work!"
+    </blockquote>
+    <p>
+        I successfully decrypted the <code>Q1.encrypted</code> file, recovered the data, and read the hidden message.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        In this lab, I gained practical experience using Linux Bash commands to:
+    </p>
+    <ul>
+        <li>List hidden files,</li>
+        <li>Decrypt a Caesar cipher, and</li>
+        <li>Decrypt an encrypted file.</li>
+    </ul>
+    <p>
+        This lab provided hands-on knowledge in understanding encryption and decryption techniques—an essential skill for security tasks.
+    </p>
+
+
+
+
+
+
+    <p><a href="./">back</a></p>
+
+</body>
+</html>
