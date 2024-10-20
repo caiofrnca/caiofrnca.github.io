@@ -22,6 +22,7 @@ Keen to making a meaningful impact by helping defend against security breaches.
   - [Security Audit (internal)](https://caiofrnca.github.io/)
 - **Web Application Security**
 - **Cryptography**
+  - [Linux - Decrypt an encrypted message](./decrypt_encrypted_msg.html)
 - **Endpoint Security**
   - [Linux - File Permissions](./file_permissions.html)
   - [SQL - Applying query filters](./sql_filter.html)
