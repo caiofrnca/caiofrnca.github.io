@@ -1,0 +1,109 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysing a network packet with Wireshark</title>
+</head>
+<body>
+
+  <h1>Analysing a network packet with Wireshark</h1>
+
+<h2>Activity Overview</h2>
+<p>Analysing network traffic is essential for identifying the types of traffic moving to and from systems on a network. Packet capture and analysis provide valuable insights that help security and network teams understand network communications.</p>
+
+<p>Network protocol analyzers like Wireshark, which features a user-friendly graphical interface, make it easier to examine complex packet data, detect patterns, and apply filters to focus on relevant traffic.</p>
+
+<p>In this lab, I used Wireshark to inspect a sample packet capture file, applying filters to sort through and analyse network traffic data efficiently.</p>
+
+<h2>Scenario</h2>
+<p>In this scenario, using a network packet capture file, I analysed traffic data to identify key elements of a user's browsing session related to a connection to an internet site.</p>
+
+<p>My tasks included filtering data to:</p>
+<ul>
+    <li>Identify the source and destination IP addresses,</li>
+    <li>Examine the protocols used during the connection,</li>
+    <li>Analyse data packets to understand the information sent and received.</li>
+</ul>
+<p>To accomplish this, I first explored Wireshark’s interface and then examined the details of a single packet to understand its protocol and data layers. I applied filters to select specific packets, inspected UDP DNS traffic for protocol data, and filtered TCP packet data to search for specific payload text. This exercise strengthened my ability to analyse network traffic and extract relevant information using Wireshark.</p>
+
+<h2>Task 1: Exploring Data with Wireshark</h2>
+<p>In this task, I opened a network packet already captured (.pcap) file in Wireshark to observe web request data from a system connecting to an internet site. After launching Wireshark, I explored its main interface, which displays network traffic in a three-pane view, organised by key properties for each packet:</p>
+<ul>
+    <li><strong>No.</strong>: Packet index number</li>
+    <li><strong>Time</strong>: Timestamp</li>
+    <li><strong>Source</strong>: Source IP address</li>
+    <li><strong>Destination</strong>: Destination IP address</li>
+    <li><strong>Protocol</strong>: Protocol used in the packet</li>
+    <li><strong>Length</strong>: Packet length</li>
+    <li><strong>Info</strong>: Summary of packet contents as interpreted by Wireshark</li>
+</ul>
+<p>Wireshark's colouring rules help quickly identify different types of traffic. For example, DNS traffic appears in light blue, while green packets indicate TCP and HTTP protocol traffic. I scrolled through the packets until locating entries with <strong>ICMP</strong> protocol, identified by "Echo (ping) request" in the info column. This task provided insight into packet structure, protocol types, and Wireshark’s visual tools for analysing network data.</p>
+
+        <div style="text-align: center;">  
+  <img src="./img/pkt_wireshark/1.png" alt="Img" width="600">
+  </div>
+
+<h2>Task 2: Applying a Basic Wireshark Filter and Inspecting a Packet</h2>
+<p>Then, I applied a basic filter in Wireshark to isolate packets associated with a specific IP address (<code>ip.addr == 142.250.1.139</code>). By entering this filter in the <strong>Apply a display filter</strong> box and pressing Enter, I narrowed the displayed packet list to only those where the source or destination IP matches the specified address.</p>
+
+<p>With the filter applied, only two packet colors appeared: light pink for ICMP protocol packets and light green for TCP packets (including HTTP, which operates over TCP). I then double-clicked the first TCP packet to open the <strong>packet details pane</strong>, allowing for an in-depth examination of network layers and protocols.</p>
+
+        <div style="text-align: center;">  
+  <img src="./img/pkt_wireshark/2.png" alt="Img" width="600">
+  </div>
+
+<h2>Task 3: Using Filters to Select Packets</h2>
+<p>In this task, I applied filters in Wireshark to analyse specific network packets based on source and destination IP addresses, as well as Ethernet MAC addresses.</p>
+<ul>
+    <li><strong>Source IP Filter</strong>: I entered <code>ip.src == 142.250.1.139</code> to isolate packets originating from the IP address 142.250.1.139, returning a filtered list of relevant entries.</li>
+    <li><strong>Destination IP Filter</strong>: After clearing the previous filter, I used <code>ip.dst == 142.250.1.139</code> to display only packets sent to this IP address.</li>
+    <li><strong>MAC Address Filter</strong>: I then filtered by MAC address (<code>eth.addr == 42:01:ac:15:e0:02</code>), which captured traffic related to the specified MAC address.</li>
+</ul>
+<p>After filtering, I examined the first packet in the list, expanding the <strong>Ethernet II</strong> and <strong>IPv4</strong> subtrees to review details, including the <strong>Time to Live</strong> and <strong>Protocol</strong> fields. This task enhanced my ability to filter and analyse packet details using IP and MAC addresses in Wireshark.</p>
+
+        <div style="text-align: center;">  
+  <img src="./img/pkt_wireshark/3.png" alt="Img" width="600">
+  </div>
+
+<h2>Task 4: Using Filters to Explore DNS Packets</h2>
+<p>Next, I applied filters in Wireshark to analyse DNS traffic by isolating packets using <strong>UDP port 53</strong>, which is specific to DNS queries and responses.</p>
+<ul>
+    <li><strong>DNS Filter</strong>: I entered <code>udp.port == 53</code> to filter only DNS-related traffic, showing packets involved in domain name lookups.</li>
+    <li><strong>Examining Queries</strong>: I opened the first packet in the list and expanded the <strong>Domain Name System (query)</strong> section. Under <strong>Queries</strong>, I found the domain name queried, which was <code>opensource.google.com</code>.</li>
+    <li><strong>Reviewing Answers</strong>: I then inspected the fourth packet in the list, navigating to the <strong>Answers</strong> section under <strong>Domain Name System (query)</strong>. This displayed the queried name (<code>opensource.google.com</code>) along with its associated IP addresses.</li>
+</ul>
+<p>This task demonstrated how to filter DNS traffic and examine the details of DNS queries and responses, providing deeper insight into how domain names are resolved to IP addresses.</p>
+
+        <div style="text-align: center;">  
+  <img src="./img/pkt_wireshark/4.png" alt="Img" width="600">
+  </div>
+
+<h2>Task 5: Using Filters to Explore TCP Packets</h2>
+<p>Finally, I used filters in Wireshark to focus on TCP traffic, specifically analysing packets on <strong>TCP port 80</strong>, which is associated with standard web traffic. Applying the filter <code>tcp.port == 80</code> allowed me to isolate packets related to web requests, including traffic generated when accessing <a href="http://opensource.google.com">http://opensource.google.com</a>.</p>
+
+<p>This filters to packets containing web requests made with the <code>curl</code> command in this sample packet capture file.</p>
+
+<p>After applying the filter, I double-clicked the first packet in the list to view its details, where I observed that the destination IP address was <code>169.254.169.254</code>.</p>
+
+        <div style="text-align: center;">  
+  <img src="./img/pkt_wireshark/5.png" alt="Img" width="600">
+  </div>
+
+<h2>Conclusion</h2>
+<p>Through this activity, I gained hands-on experience using Wireshark to:</p>
+<ul>
+    <li>Open and analyse saved packet capture files,</li>
+    <li>View high-level packet data, and</li>
+    <li>Apply filters to inspect detailed packet data.</li>
+</ul>
+<p>This marks a significant milestone in my understanding of network packet analysis tools and my ability to examine network traffic effectively.</p>
+
+    <p><a href="./">back</a></p>
+
+</body>
+</html>  
