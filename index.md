@@ -16,8 +16,8 @@ Keen to making a meaningful impact by helping defend against security breaches.
 - **Network & Security**
   - [Network Design and Implementation using GNS3](./dpl_network.html)
   - [Network Design and Implementation using GNS3 - Youtube Demo](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
-  - [Analysing a network packet with Wireshark](./pkt_wireshark.html)   
 - **Detection and response**
+  - [Analysing a network packet with Wireshark](./pkt_wireshark.html)
   - [Investigating a suspicious file hash using VirusTotal](./file_virustotal.html)
 - **Security Frameworks**
   - [Applying NIST CF Framework]()
