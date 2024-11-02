@@ -1,0 +1,105 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Signatures and Logs with Suricata</title>
+</head>
+<body>
+    <h1>Exploring Signatures and Logs with Suricata</h1>
+    
+    <h2>Activity Overview</h2>
+    <p>In this lab activity, I explored how Suricata, an open-source intrusion detection system (IDS) and intrusion prevention system (IPS), utilizes rules to monitor network traffic. Using the Bash shell, I examined rule components, triggered a rule, and reviewed the resulting alerts and logs.</p>
+    
+    <p>This lab included multiple tasks:</p>
+    <ul>
+        <li><strong>Examined a Rule in Suricata:</strong> Reviewed the structure and purpose of a Suricata rule.</li>
+        <li><strong>Triggered a Rule and Reviewed Alert Logs:</strong> Tested a rule by triggering it and analyzed the generated alert logs.</li>
+        <li><strong>Examined eve.json Outputs:</strong> Inspected Suricata’s eve.json output to understand how events are recorded and logged.</li>
+    </ul>
+
+    <h2>Scenario</h2>
+    <p>As a security analyst tasked with monitoring network traffic, I used Suricata to configure and trigger alerts on specific network events. I explored Suricata’s custom rules and tested them against sample network data contained in <em>sample.pcap</em> and <em>custom.rules</em> files. Suricata generated alerts based on these rules, which I reviewed in the <em>fast.log</em> and <em>eve.json</em> files located in <code>/var/log/suricata</code>.</p>
+    
+    <ul>
+        <li><strong>sample.pcap:</strong> A packet capture file containing network traffic data used for testing.</li>
+        <li><strong>custom.rules:</strong> A file where I added and tested new custom rules.</li>
+        <li><strong>fast.log:</strong> A quick log for alert checks, adding entries whenever rule conditions were met. Though deprecated, it’s useful for immediate rule testing.</li>
+        <li><strong>eve.json:</strong> The main JSON log that provides detailed alerts and telemetry events for deeper analysis.</li>
+    </ul>
+
+    <h2>Task 1: Examining a Custom Rule in Suricata</h2>
+    <p>In this task, I reviewed a custom rule in Suricata to understand its composition, which consists of three main components: action, header, and rule options.</p>
+
+          <div style="text-align: center;">  
+  <img src="./img/log_suricata/1.png" alt="Img" width="600">
+  </div>
+    
+    <ul>
+        <li><strong>Action:</strong> The action (<code>alert</code>) determines what Suricata does when conditions are met. Here, <code>alert</code> instructs Suricata to monitor for specified traffic and generate an alert if detected. Alternative actions like <code>drop</code>, <code>pass</code>, and <code>reject</code> are used to block or pass traffic, depending on network needs.</li>
+        <li><strong>Header:</strong> The header defines network attributes such as protocol, source and destination IPs, ports, and traffic direction. In this example, the protocol is HTTP, with traffic originating from <code>$HOME_NET</code> and directed to <code>$EXTERNAL_NET</code>, indicating outgoing HTTP traffic from the local network to external sites.</li>
+        <li><strong>Rule Options:</strong> This section includes specific conditions for triggering an alert, such as searching for <code>GET</code> as the HTTP method, setting a unique signature ID (<code>sid</code>), and specifying the revision version (<code>rev</code>). The message (<code>msg</code>) displays alert text ("GET on wire") to indicate why the alert was triggered.</li>
+    </ul>
+
+    <p>To summarize, this rule generates an alert when Suricata detects HTTP packets containing the GET method from the home network to an external network. This exercise deepened my understanding of how custom Suricata rules are structured and applied in network monitoring.</p>
+
+    <h2>Task 2: Triggering a Custom Rule in Suricata</h2>
+    <p>Next, I ran Suricata with a custom rule to observe the generated alerts. First, I verified that the <code>/var/log/suricata</code> directory was empty before executing the rule.</p>
+
+          <div style="text-align: center;">  
+  <img src="./img/log_suricata/2.png" alt="Img" width="600">
+  </div>
+
+    <p>Then, I used the following command to process a sample packet capture (<em>sample.pcap</em>) using the rules in <em>custom.rules</em>:</p>
+    <p><code>sudo suricata -r sample.pcap -S custom.rules -k none</code></p>
+
+            <div style="text-align: center;">  
+  <img src="./img/log_suricata/3.png" alt="Img" width="600">
+  </div>
+
+    <p><strong>Command Breakdown:</strong></p>
+    <ul>
+        <li><code>-r sample.pcap</code>: Specifies the input file to simulate network traffic.</li>
+        <li><code>-S custom.rules</code>: Instructs Suricata to use the rules defined in <em>custom.rules</em>.</li>
+        <li><code>-k none</code>: Disables checksum checks, as they are unnecessary for the sample packet data.</li>
+    </ul>
+
+    <p>After running Suricata, four files appeared in <code>/var/log/suricata</code>, including <em>fast.log</em> and <em>eve.json</em>, which contain alerts triggered by the custom rule.</p>
+
+            <div style="text-align: center;">  
+  <img src="./img/log_suricata/4.png" alt="Img" width="600">
+  </div>
+
+    <p>I examined the <em>fast.log</em> file using <code>cat</code>, which displayed alerts in real-time, with each entry showing the rule message ("GET on wire"), traffic classification, priority, and details about the source and destination. This exercise provided hands-on experience in setting up custom rules in Suricata, monitoring traffic, and interpreting alert logs.</p>
+
+            <div style="text-align: center;">  
+  <img src="./img/log_suricata/5.png" alt="Img" width="600">
+  </div>  
+  
+   <h2>Task 3: Examining eve.json Output</h2>
+    <p>Additionally, I analyzed Suricata’s main log file, <em>eve.json</em>, which stores detailed event data in JSON format. Located in <code>/var/log/suricata/</code>, this file includes extensive information beyond what’s available in <em>fast.log</em>, making it more valuable for in-depth analysis.</p>
+
+          <div style="text-align: center;">  
+  <img src="./img/log_suricata/6.png" alt="Img" width="600">
+  </div>
+  
+    <p>To improve readability, I used the <code>jq</code> command, which formatted the JSON output for easier inspection. I examined the severity level, alert signature, and destination IP, confirming that the first alert’s severity was 3, the alert signature was "GET on wire," and the destination IP address for the first event was 142.250.1.139.</p>
+          <div style="text-align: center;">  
+  <img src="./img/log_suricata/7.png" alt="Img" width="600">
+  </div>
+    <p>Finally, I used <code>jq</code> to filter specific event data, such as timestamps, flow IDs, alert signatures, protocols, and destination IPs, and explored how flow IDs track network sessions within the log.</p>
+          <div style="text-align: center;">  
+  <img src="./img/log_suricata/8.png" alt="Img" width="600">
+  </div>
+    <h3>Note:</h3>
+    <p>A network flow refers to a sequence of packets between a source and destination that share common characteristics such as IP addresses, protocols, and more. In cybersecurity, network traffic flows help analysts understand the behavior of network traffic to identify and analyze threats. Suricata assigns a unique <code>flow_id</code> to each network flow, making it a useful field for correlating network traffic that belongs to the same flows.</p>
+
+    <h2>Conclusion</h2>
+    <p>Through this lab, I gained hands-on experience with Suricata’s custom rules, packet capture monitoring, and analyzing Suricata outputs in <em>fast.log</em> and <em>eve.json</em>. This activity sharpened my skills in creating and testing intrusion detection rules, monitoring network traffic, and using JSON parsing for security analysis—key competencies for a security analyst.</p>
+<p><a href="./">back</a></p>
+</body>
+</html>
