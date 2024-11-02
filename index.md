@@ -19,6 +19,7 @@ Keen to making a meaningful impact by helping defend against security breaches.
 - **Detection and response**
   - [Analysing a network packet with Wireshark](./pkt_wireshark.html)
   - [Investigating a suspicious file hash using VirusTotal](./file_virustotal.html)
+  - [Exploring signatures and logs with Suricata](./log_suricata.html)
 - **Security Frameworks**
   - [Applying NIST CF Framework]()
 - **GRC**
