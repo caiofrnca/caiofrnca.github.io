@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsDefend SOC Walkthrough</title>
+</head>
+<body>
+    <h1>LetsDefend SOC Walkthrough</h1>
+
+    <h2>Introduction</h2>
+    <p>
+        In my journey to becoming a skilled SOC analyst, I aim to immerse myself in practical labs and real-world scenarios 
+        to prepare for the challenges of defending against cyber threats. The LetsDefend platform provides an incredible 
+        opportunity to simulate working in a Security Operations Center (SOC), enabling hands-on experience with investigating 
+        and responding to various security incidents.
+    </p>
+    <p>
+        This walkthrough showcases how I tackled a phishing alert using LetsDefend’s SOC environment, honing my cybersecurity 
+        skills in the process.
+    </p>
+
+    <hr>
+
+    <h2>What is LetsDefend?</h2>
+    <p>
+        LetsDefend is a hands-on Blue Team training platform that simulates a SOC environment. It allows users to gain practical 
+        experience by investigating real-world cyber attack scenarios, working on alerts, and applying industry-standard processes 
+        to identify, contain, and remediate threats.
+    </p>
+
+    <h2>What is a SOC?</h2>
+    <p>
+        A Security Operations Center (SOC) is the command center for an organization’s cybersecurity defenses. SOC analysts monitor 
+        and analyze network activity, detect threats, and take action to protect the organization from cyber incidents. A SOC combines 
+        skilled personnel, advanced technologies, and robust processes to safeguard an organization’s assets and data.
+    </p>
+
+    <h2>What is Phishing?</h2>
+    <p>
+        Phishing is a cyber attack where threat actors use fraudulent communications—often via email—to deceive recipients into revealing 
+        sensitive information, such as login credentials or financial data. This type of attack remains one of the most common and effective 
+        methods used by cybercriminals.
+    </p>
+
+    <hr>
+
+    <h2>Activity Overview</h2>
+    <h3>Event ID 257: SOC282 — Phishing Alert — Deceptive Mail Detected</h3>
+    <p>
+        In this scenario, a suspicious email with the subject line “Free Coffee Voucher” was sent to a user named Felix on May 13, 2024, 
+        at 9:22 AM. The sender’s email address was <code>free@coffeeshoop.com</code>, and this triggered the SOC282 rule: Phishing Alert - 
+        Deceptive Mail Detected.
+    </p>
+    <p>
+        Despite being flagged as suspicious, the email security product marked the action as “allowed,” meaning no preventative measures 
+        were taken to block or quarantine the email.
+    </p>
+    <p>
+        The goal of this investigation was to analyze the alert, identify any malicious intent, and determine the necessary actions to 
+        protect the network from potential harm.
+    </p>
+
+    <hr>
+
+    <h2>Steps Taken</h2>
+    <ol>
+        <li>Check the SOC Ticket Queue</li>
+        <li>Take Ownership and Create a Case</li>
+        <li>Utilize the Playbook</li>
+        <li>Email Analysis</li>
+        <li>Analyze URLs and Attachments</li>
+        <li>Containment and Remediation</li>
+        <li>Report Artifacts and IOCs</li>
+        <li>Close the Ticket</li>
+    </ol>
+  
+            <div style="text-align: center;">  
+  <img src="./img/log_suricata/4.png" alt="Img" width="600">
+  </div>
+
+  <p><a href="./">back</a></p>
+
+</body>
+</html>
