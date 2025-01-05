@@ -32,8 +32,6 @@ Keen to making a meaningful impact by helping defend against security breaches.
 ## Web Application Security
 <!-- Placeholder content for future links -->
 
----
-
 ## Cryptography & Hashing
 - [Linux - Decrypt an encrypted message](./decrypt_encrypted_msg.html)
 - [Linux - Create hash values](./hash_values.html)
