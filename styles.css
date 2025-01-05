@@ -1,0 +1,39 @@
+/* Basic Layout Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+/* Two-column layout */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Styling for section headings */
+h2, h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Styling for links */
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Remove default list styles */
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
