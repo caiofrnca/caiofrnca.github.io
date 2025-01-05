@@ -9,21 +9,27 @@ layout: default
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LetsDefend - Phishing Alert - SIEM Walkthrough</title>
 
- <style>
+    <style>
         .two-columns {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
 
-        ol {
-            list-style-type: decimal;
-            margin: 0;
-            padding: 0;
+        .column p {
+            margin-bottom: 10px;
         }
 
-        li {
-            margin-bottom: 10px;
+        .column p::before {
+            content: counter(list-counter) ". "; /* Display counter number before each item */
+        }
+
+        .column {
+            counter-reset: list-counter; /* Initialize counter for each column */
+        }
+
+        .column p {
+            counter-increment: list-counter; /* Increment counter for each item */
         }
     </style>
     
@@ -88,18 +94,18 @@ layout: default
 
     <h2>Steps Taken</h2>
     <div class="two-columns">
-        <ol>
-            <li>Check the SOC Ticket Queue</li>
-            <li>Take Ownership and Create a Case</li>
-            <li>Utilize the Playbook</li>
-            <li>Email Analysis</li>
-        </ol>
-        <ol>
-            <li>Analyze URLs and Attachments</li>
-            <li>Containment and Remediation</li>
-            <li>Report Artifacts and IOCs</li>
-            <li>Close the Ticket</li>
-        </ol>
+        <div class="column">
+            <p>1. Check the SOC Ticket Queue</p>
+            <p>2. Take Ownership and Create a Case</p>
+            <p>3. Utilize the Playbook</p>
+            <p>4. Email Analysis</p>
+        </div>
+        <div class="column">
+            <p>5. Analyze URLs and Attachments</p>
+            <p>6. Containment and Remediation</p>
+            <p>7. Report Artifacts and IOCs</p>
+            <p>8. Close the Ticket</p>
+        </div>
     </div>
   
             <div style="text-align: center;">  
