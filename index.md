@@ -2,10 +2,6 @@
 layout: default
 ---
 
-<head>
-  <link rel="stylesheet" href="style.css">
-</head>
-
 # Hi, I'm Caio!  
 
 Keen to making a meaningful impact by helping defend against security breaches.
