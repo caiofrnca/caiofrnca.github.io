@@ -8,6 +8,25 @@ layout: default
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LetsDefend - Phishing Alert - SIEM Walkthrough</title>
+
+ <style>
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        ol {
+            list-style-position: inside;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+    
 </head>
 <body>
     <h1>LetsDefend | SOC | Phishing Alert - SIEM Walkthrough</h1>
@@ -68,16 +87,20 @@ layout: default
     <hr>
 
     <h2>Steps Taken</h2>
-    <ol>
-        <li>Check the SOC Ticket Queue</li>
-        <li>Take Ownership and Create a Case</li>
-        <li>Utilize the Playbook</li>
-        <li>Email Analysis</li>
-        <li>Analyze URLs and Attachments</li>
-        <li>Containment and Remediation</li>
-        <li>Report Artifacts and IOCs</li>
-        <li>Close the Ticket</li>
-    </ol>
+    <div class="two-columns">
+        <ol>
+            <li>Check the SOC Ticket Queue</li>
+            <li>Take Ownership and Create a Case</li>
+            <li>Utilize the Playbook</li>
+            <li>Email Analysis</li>
+        </ol>
+        <ol>
+            <li>Analyze URLs and Attachments</li>
+            <li>Containment and Remediation</li>
+            <li>Report Artifacts and IOCs</li>
+            <li>Close the Ticket</li>
+        </ol>
+    </div>
   
             <div style="text-align: center;">  
   <img src="./img/log_suricata/4.png" alt="Img" width="600">
