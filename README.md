@@ -3,34 +3,61 @@
 
 <h1>Hi, I'm Caio! <br/><a href="https://www.linkedin.com/in/caiofranca/">Cybersecurity Professional</a></h1>
 
-<h2>🎓 Certifications: </h2>
+Keen to making a meaningful impact by helping defend against security breaches.
 
- - [CompTIA Security +](https://www.credly.com/badges/a33f25c3-faa1-4d63-8b89-a76751bed636)
- - [Google Cybersecurity Professional]()
-  
-<h2>👨‍💻 Network and Cybersecurity Labs & Projects:</h2>
+## 🎓 Certifications:
 
-- <b>Network Security Labs</b>
-  - [Design and Implementation using GNS3](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
-- <b>Security Frameworks</b>
-  - [Applying NIST CF Framework](https://github.com/caiofrnca/caiofrnca.github.io)
-- <b>GRC</b>
-  - [Security Audit (internal)](https://github.com/caiofrnca/caiofrnca.github.io)
-- <b>Web Application Security</b>
-- <b>Cryptography</b>
-- <b>Endpoint Security</b>
-  - [Linux - File Permissions](https://github.com/caiofrnca/caiofrnca.github.io)
-- <b>Identity and Access Management (IAM)</b>
-- <b>Cloud Security Labs</b>
-- <b>Penetration Testing Labs</b>
+- [CompTIA Security +](https://www.credly.com/badges/a33f25c3-faa1-4d63-8b89-a76751bed636)
+- [Google Cybersecurity Professional]()
+
+# 👨‍💻 Network and Cybersecurity Projects:
+
+## Network & Security
+- [Network Design and Implementation using GNS3](./dpl_network.html)
+- [Network Design and Implementation using GNS3 - Youtube Demo](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
+
+## Detection and Response
+- [Analysing a network packet with Wireshark](./pkt_wireshark.html)
+- [Investigating a suspicious file hash using VirusTotal](./file_virustotal.html)
+- [Exploring signatures and logs with Suricata](./log_suricata.html)
+- [LetsDefend - Phishing Alert - SIEM Walkthrough](./ld_siem.html)
+
+## Security Frameworks
+- [Applying NIST CF Framework](#)
+
+## GRC
+- [Security Audit (internal)](https://caiofrnca.github.io/)
+
+## Web Application Security
+<!-- Placeholder content for future links -->
+
+## Cryptography & Hashing
+- [Linux - Decrypt an encrypted message](./decrypt_encrypted_msg.html)
+- [Linux - Create hash values](./hash_values.html)
+
+## Endpoint Security
+- [Linux - File Permissions](./file_permissions.html)
+- [SQL - Applying query filters](./sql_filter.html)
+
+## Identity and Access Management (IAM)
+<!-- Placeholder content for future links -->
+
+## Cloud Security Labs
+<!-- Placeholder content for future links -->
+
+## Penetration Testing Labs
+<!-- Placeholder content for future links -->
 
 
-<h2> 🤳 Connect with me:</h2>
-
-[<img align="left" alt="CaioFranca | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-
-[linkedin]: https://linkedin.com/in/caiofranca
-
-[<img align="left" alt="CaioFranca | Email" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" />][email]
-
-[email]: mailto:braga.caio@outlook.com
+## 🤳 Connect with me:
+<div style="display: flex; align-items: center;">
+  <a href="mailto:braga.caio@outlook.com">
+    <img alt="CaioFranca | Email" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" style="margin-right: 10px;" />
+  </a>
+  <a href="https://linkedin.com/in/caiofranca">
+    <img alt="CaioFranca | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" style="margin-right: 10px;" />
+  </a>
+  <a href="">
+    <img alt="YourName | GitHub" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" />
+  </a>
+</div>
