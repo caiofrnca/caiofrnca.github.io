@@ -9,7 +9,7 @@ layout: default
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LetsDefend - Phishing Alert - SIEM Walkthrough</title>
 
- <style>
+    <style>
         .two-columns {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -17,13 +17,19 @@ layout: default
         }
 
         ol {
-            list-style-position: inside;
+            list-style-type: decimal;
             margin: 0;
             padding: 0;
+            counter-reset: list-counter; /* Initialize counter */
         }
 
         li {
+            counter-increment: list-counter; /* Increment counter for each item */
             margin-bottom: 10px;
+        }
+
+        li::before {
+            content: counter(list-counter) ". "; /* Display counter number before each item */
         }
     </style>
     
