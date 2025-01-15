@@ -4,7 +4,7 @@ layout: default
 
 # Hi, I'm Caio!  
 
-Keen to making a meaningful impact by helping defend against security breaches.
+Keen to make a meaningful impact by helping defend against security breaches.
 
 ## 🎓 Certifications:
 
