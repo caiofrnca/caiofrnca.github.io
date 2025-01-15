@@ -6,6 +6,9 @@ layout: default
 
 Keen to make a meaningful impact by helping defend against security breaches.
 
+
+🚧 Portfolio Under continuous Construction 👨‍💻
+
 ## 🎓 Certifications:
 
 - [CompTIA Security +](https://www.credly.com/badges/a33f25c3-faa1-4d63-8b89-a76751bed636)
