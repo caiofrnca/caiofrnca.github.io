@@ -17,12 +17,14 @@ Keen to make a meaningful impact by helping defend against security breaches.
 - [Network Design and Implementation using GNS3](./dpl_network.html)
 - [Network Design and Implementation using GNS3 - Youtube Demo](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
 
+## Malware Analysis
+- [Investigating a suspicious file hash using VirusTotal](./file_virustotal.html)
+- [LetsDefend - Static Analysis - Malicious Document](./ld_st_analysis_maldoc.html)
+
 ## Detection and Response
 - [Analysing a network packet with Wireshark](./pkt_wireshark.html)
-- [Investigating a suspicious file hash using VirusTotal](./file_virustotal.html)
 - [Exploring signatures and logs with Suricata](./log_suricata.html)
 - [LetsDefend - Phishing Alert - SIEM Walkthrough](./ld_siem.html)
-- [LetsDefend - Static Analysis - Malicious Document](./ld_st_analysis_maldoc.html)
 
 ## Security Frameworks
 - [Applying NIST CF Framework](#)
