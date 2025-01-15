@@ -19,7 +19,7 @@ Keen to make a meaningful impact by helping defend against security breaches.
 
 ## Malware Analysis
 - [Investigating a suspicious file hash using VirusTotal](./file_virustotal.html)
-- [LetsDefend - Static Analysis - Malicious Document](./ld_st_analysis_maldoc/ld_st_analysis_maldoc.html)
+- [LetsDefend - Static Analysis - Malicious Document](./ld_st_analysis_maldoc.html)
 
 ## Detection and Response
 - [Analysing a network packet with Wireshark](./pkt_wireshark.html)
