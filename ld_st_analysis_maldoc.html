@@ -80,6 +80,11 @@ layout: default
 
     <h3>2 - Checking the hash on the cyber community:</h3>
     <p>VirusTotal search: 50/62 flagged as malicious:</p>
+    
+                        <div style="text-align: center;">  
+  <img src="./img/ld_st_analysis_maldoc/2.png" alt="Img" width="600">
+  </div>
+    
     <p>There are other information channels (mentioned below), but in order to reduce the size of the activity, I only kept VirusTotal. ALWAYS remember to get as many sources/info as possible!</p>
     <ul>
         <li>AnyRun</li>
@@ -90,8 +95,14 @@ layout: default
     </ul>
 
     <h3>3 - Next step, tool called exiftool</h3>
-    <p>ExifTool shows loads of file information. We should pay attention to any suspicious information like data creation/modification, type, language, template, size, etc:</p>
+    <p>ExifTool is a command-line tool for reading, writing, and editing metadata in various file formats. It supports EXIF, IPTC, XMP, and other metadata standards. 
+     Useful for digital forensics and cybersecurity, it helps extract detailed file information, including creation dates and hidden data.. We should pay attention to any suspicious information like data creation/modification, type, language, template, size, etc:</p>
     <pre># exiftool “File name”</pre>
+    
+                            <div style="text-align: center;">  
+  <img src="./img/ld_st_analysis_maldoc/3.png" alt="Img" width="600">
+  </div>
+    
     <h4>Details that caught my attention:</h4>
     <ul>
         <li>Creation date 2020, modification date 2023 !?</li>
@@ -106,6 +117,10 @@ layout: default
     <p>Example usage:</p>
     <pre>strings suspicious_file.exe</pre>
 
+                            <div style="text-align: center;">  
+  <img src="./img/ld_st_analysis_maldoc/4.png" alt="Img" width="600">
+  </div>
+
     <h4>What to look for:</h4>
     <ul>
         <li>IP Addresses</li>
@@ -113,6 +128,10 @@ layout: default
         <li>Suspicious File locations</li>
         <li>Malicious files, codes</li>
     </ul>
+
+                            <div style="text-align: center;">  
+  <img src="./img/ld_st_analysis_maldoc/5.png" alt="Img" width="600">
+  </div>
 
     <h3>5 - Xorsearch tool</h3>
     <p>Xorsearch is a powerful tool for analyzing binary files to identify and extract hidden data, particularly obfuscated or encoded strings.</p>
@@ -144,6 +163,10 @@ layout: default
         <li><strong>olevba:</strong> Extracts and analyzes VBA (Visual Basic for Applications) macros embedded in Office documents.</li>
         <li><strong>olemeta:</strong> Extracts metadata from OLE or OpenXML documents.</li>
     </ul>
+
+                                    <div style="text-align: center;">  
+  <img src="./img/ld_st_analysis_maldoc/6.png" alt="Img" width="600">
+  </div>
 
     <h2>Conclusion</h2>
     <p>Analyzing malicious documents is a vital skill for cybersecurity professionals, as attackers often exploit macros and document features to deliver malware or steal sensitive information. Tools like hash-checking utilities, ExifTool, and strings help identify anomalies such as suspicious metadata, embedded macros, and obfuscated content. Techniques such as hash verification and extracting readable strings provide critical insights into the document's behavior and potential threats.</p>
