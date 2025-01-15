@@ -15,7 +15,6 @@ Keen to make a meaningful impact by helping defend against security breaches.
 
 ## Network & Security
 - [Network Design and Implementation using GNS3](./dpl_network.html)
-- [Network Design and Implementation using GNS3 - Youtube Demo](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
 
 ## Malware Analysis
 - [Investigating a suspicious file hash using VirusTotal](./file_virustotal.html)
