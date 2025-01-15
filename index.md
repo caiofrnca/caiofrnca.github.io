@@ -22,6 +22,7 @@ Keen to making a meaningful impact by helping defend against security breaches.
 - [Investigating a suspicious file hash using VirusTotal](./file_virustotal.html)
 - [Exploring signatures and logs with Suricata](./log_suricata.html)
 - [LetsDefend - Phishing Alert - SIEM Walkthrough](./ld_siem.html)
+- [LetsDefend - Static Analysis - Malicious Document](./ld_st_analysis_maldoc.html)
 
 ## Security Frameworks
 - [Applying NIST CF Framework](#)
