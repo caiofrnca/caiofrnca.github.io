@@ -2,10 +2,7 @@
 layout: default
 ---
 
-# Hi, I'm Caio!  
-
 Keen to make a meaningful impact by helping defend against security breaches.
-
 
 🚧 Portfolio Under continuous Construction 👨‍💻
 
