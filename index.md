@@ -4,7 +4,7 @@ layout: default
 
 #### Keen to make a meaningful impact by helping defend against security breaches.
 
-#### 🚧 Portfolio Under continuous Construction 👨‍💻
+🚧 Portfolio Under continuous Construction 👨‍💻
 
 ## 🎓 Certifications:
 
