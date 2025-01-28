@@ -11,8 +11,9 @@ Keen to make a meaningful impact by helping defend against security breaches.
 
 ## 🎓 Certifications:
 
+- [Let'sDefend - SOC Analyst Learning Path](https://app.letsdefend.io/certificate/show/751aadd1-f244-4785-b39e-546152a30075)
+- [Google Cybersecurity Professional](https://www.credly.com/earner/earned/badge/5cdd9676-447e-4ddf-b049-dde73325cc85)
 - [CompTIA Security +](https://www.credly.com/badges/a33f25c3-faa1-4d63-8b89-a76751bed636)
-- [Google Cybersecurity Professional]()
 
 # 👨‍💻 Network and Cybersecurity Projects:
 
