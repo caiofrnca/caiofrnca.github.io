@@ -2,7 +2,7 @@
 layout: default
 ---
 
-#### Keen to make a meaningful impact by helping defend against security breaches.
+#### Keen to make a meaningful impact by enhancing risk management frameworks to safeguard organizations against security threats and regulatory risks.
 
 🚧 Portfolio Under continuous Construction 👨‍💻
 
@@ -13,6 +13,10 @@ layout: default
 - [CompTIA Security +](https://www.credly.com/badges/a33f25c3-faa1-4d63-8b89-a76751bed636)
 
 # 👨‍💻 Network and Cybersecurity Projects:
+
+## Governance, Risk Management, and Compliance (GRC)
+- [Applying NIST CF Framework](https://caiofrnca.github.io/)
+- [Security Audit (internal)](https://caiofrnca.github.io/)
 
 ## Network & Security
 - [Network Design and Implementation using GNS3](./dpl_network.html)
@@ -25,12 +29,6 @@ layout: default
 - [Analysing a network packet with Wireshark](./pkt_wireshark.html)
 - [Exploring signatures and logs with Suricata](./log_suricata.html)
 - [LetsDefend - Phishing Alert - SIEM Walkthrough](./ld_siem.html)
-
-## Security Frameworks
-- [Applying NIST CF Framework](#)
-
-## GRC
-- [Security Audit (internal)](https://caiofrnca.github.io/)
 
 ## Web Application Security
 <!-- Placeholder content for future links -->
