@@ -3,9 +3,9 @@ layout: default
 ---
 
 #### I engineer networks that scale. 
-#### 7+ years in NOC/IT Ops (Meta via Astreya; PwC Ireland; RTM), now focused on large-scale routing, telemetry, and infra automation (Python).
+#### 5+ years in NOC/IT Ops (Meta via Astreya; PwC Ireland; RTM), now focused on large-scale routing, telemetry, and infra automation (Python).
 
-- 📍 Dublin, Ireland | 🔗 [LinkedIn](https://www.linkedin.com/in/caiofrnca)
+- 📍 Dublin, Ireland,  🔗 [LinkedIn](https://www.linkedin.com/in/caiofrnca)
 
 🚧 Portfolio Under continuous Construction 👨‍💻
 
