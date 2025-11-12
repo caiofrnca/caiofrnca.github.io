@@ -15,7 +15,7 @@ layout: default
 - [Google Cybersecurity Professional](https://www.credly.com/earner/earned/badge/5cdd9676-447e-4ddf-b049-dde73325cc85)
 - [CompTIA Security +](https://www.credly.com/badges/a33f25c3-faa1-4d63-8b89-a76751bed636)
 
-## Highlights for Network Production Engineer
+## Highlights
 
 - **Routing & Scale:** BGP, OSPF/IS-IS, MPLS fundamentals; hands-on GNS3/EVE-NG multi-vendor labs.
 - **Automation:** Python for config templating, health checks, and change validation; GitOps workflows.
