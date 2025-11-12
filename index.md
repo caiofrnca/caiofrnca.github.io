@@ -2,7 +2,8 @@
 layout: default
 ---
 
-#### I build reliable, automated networks. 5+ years in NOC/IT Ops (Meta via Astreya; PwC Ireland), now focused on large-scale routing, telemetry, and infra automation (Python). 
+#### I engineer networks that scale. 
+#### After 5+ years in NOC and IT operations (Meta via Astreya; PwC Ireland), my focus is on automating routing, telemetry, and infrastructure systems to improve reliability at scale.
 
 - 🔗 [LinkedIn](https://www.linkedin.com/in/caiofrnca)
 - 📍 Dublin, Ireland 
