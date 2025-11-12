@@ -1,53 +1,100 @@
+- 🚧 Portfolio under continuous construction 👨‍💻  
 
-<h1>!!Under construction!!</h1>
+<h1>Hi, I'm Caio! <br/><a href="https://www.linkedin.com/in/caiofranca/">Network Production Engineer</a></h1>
 
-<h1>Hi, I'm Caio! <br/><a href="https://www.linkedin.com/in/caiofranca/">Cybersecurity Professional</a></h1>
+I engineer networks that scale.
+5+ years in NOC/IT Ops (Meta via Astreya; PwC Ireland; RTM), now focused on large-scale routing, telemetry, and infra automation (Python).
 
-Keen to making a meaningful impact by helping defend against security breaches.
+---
 
-## 🎓 Certifications:
+## 🎓 Certifications
 
-- [CompTIA Security +](https://www.credly.com/badges/a33f25c3-faa1-4d63-8b89-a76751bed636)
-- [Google Cybersecurity Professional]()
+- [Let'sDefend — SOC Analyst Learning Path](https://app.letsdefend.io/certificate/show/751aadd1-f244-4785-b39e-546152a30075)
+- [Google Cybersecurity Professional](https://www.credly.com/earner/earned/badge/5cdd9676-447e-4ddf-b049-dde73325cc85)
+- [CompTIA Security+](https://www.credly.com/badges/a33f25c3-faa1-4d63-8b89-a76751bed636)
 
-# 👨‍💻 Network and Cybersecurity Projects:
+---
 
-## Network & Security
-- [Network Design and Implementation using GNS3](./dpl_network.html)
-- [Network Design and Implementation using GNS3 - Youtube Demo](https://www.youtube.com/watch?v=gJICfH8BdH4&t=983s)
+## 🧭 Highlights
 
-## Detection and Response
-- [Analysing a network packet with Wireshark](./pkt_wireshark.html)
-- [Investigating a suspicious file hash using VirusTotal](./file_virustotal.html)
-- [Exploring signatures and logs with Suricata](./log_suricata.html)
-- [LetsDefend - Phishing Alert - SIEM Walkthrough](./ld_siem.html)
+- **Routing & Scale:** BGP, OSPF/IS-IS, MPLS fundamentals; hands-on GNS3/EVE-NG multi-vendor labs  
+- **Automation:** Python for config templating, health checks, and change validation; GitOps workflows  
+- **Observability:** NetFlow/SNMP, telemetry parsing, anomaly flags; Splunk/Zabbix/SolarWinds experience  
+- **Reliability Mindset:** HA design, redundancy, failure drills, runbooks, and post-incident reviews  
+- **Security-aware:** Firewalls/VPN, IDS/IPS, zero-trust fundamentals integrated into network designs  
 
-## Security Frameworks
-- [Applying NIST CF Framework](#)
+---
 
-## GRC
-- [Security Audit (internal)](https://caiofrnca.github.io/)
+## 🚀 Featured Projects
 
-## Web Application Security
-<!-- Placeholder content for future links -->
+### 1️⃣ Backbone-style BGP Lab (EVE-NG)
+**Goal:** emulate a mini backbone with route reflectors, graceful restart, and prefix-limit safety.
 
-## Cryptography & Hashing
-- [Linux - Decrypt an encrypted message](./decrypt_encrypted_msg.html)
-- [Linux - Create hash values](./hash_values.html)
+**What I built:**
+- Multi-ASN topology with RR, iBGP/eBGP, MED/local-pref policies  
+- Python script to push baseline configs and validate peering state (`netmiko` / `ncclient`)  
+- Health check: dumps BGP summary, parses for stuck states, and opens a ticket if thresholds trip  
 
-## Endpoint Security
-- [Linux - File Permissions](./file_permissions.html)
-- [SQL - Applying query filters](./sql_filter.html)
+**Repo:** _coming soon_  
+**Tech:** Cisco IOSv/CSR1000v, Juniper vMX, Python  
 
-## Identity and Access Management (IAM)
-<!-- Placeholder content for future links -->
+---
 
-## Cloud Security Labs
-<!-- Placeholder content for future links -->
+### 2️⃣ NetOps Automation Pack (Python)
+**Goal:** one-click “pre-change / post-change” validation for links and routing.
 
-## Penetration Testing Labs
-<!-- Placeholder content for future links -->
+**What I built:**
+- Collects interface errors, BFD status, BGP session health; diffs before/after  
+- Exports JSON + Markdown summaries for change records  
 
+**Repo:** _coming soon_  
+**Tech:** Python, TextFSM, Rich, GitHub Actions  
+
+---
+
+### 3️⃣ Monitoring & Telemetry Dash
+**Goal:** lightweight telemetry pipeline + dashboards for packet loss/jitter and BGP flaps.
+
+**What I built:**
+- Collectors for SNMP/NetFlow, parser for syslog flaps, alert thresholds  
+- Dashboard with top talkers and flap bursts; weekly SLA report generator  
+
+**Repo:** _coming soon_  
+**Tech:** Telegraf/InfluxDB (or Splunk), Python  
+
+---
+
+## 🛡️ Security & Blue-Team Labs
+
+- Wireshark: packet triage & PCAP storytelling → _blog post in progress_  
+- Suricata: rules, logs & signature tuning  
+- LetsDefend SIEM Phishing walkthrough  
+- Malware triage: static doc analysis; VT hash investigation  
+- Linux: file permissions, hashing & decrypt tasks  
+
+(These are linked from earlier portfolio items — ask me for quick demos.)
+
+---
+
+## 💼 Experience Snapshot
+
+- **NOC / IT Ops (7+ yrs):** incident response, provisioning, VLAN/IP planning, DNS updates, RMA processes  
+- **Vendors/Tech:** Cisco (IOS/NX-OS), Juniper, Palo Alto; load balancers; Splunk, Zabbix, SolarWinds  
+- **Scripting:** Python for network tasks; git-based workflows and documentation  
+
+---
+
+## 🔭 What I’m Building Next (Roadmap)
+
+- Add IS-IS and MPLS L3VPN to the backbone lab (with RR scaling tests)  
+- CI checks for configs (lint, golden templates) + pre-merge simulation  
+- Synthetic probes (loss/jitter) feeding SLOs and error budgets for links  
+
+---
+
+> 💬 I’m excited by roles that allow me to collaborate across backbone, data center, and automation teams to improve global network reliability.
+
+---
 
 ## 🤳 Connect with me:
 <div style="display: flex; align-items: center;">
