@@ -5,9 +5,7 @@ layout: default
 #### I engineer networks that scale. 
 #### After 5+ years in NOC and IT operations (Meta via Astreya; PwC Ireland), my focus is on automating routing, telemetry, and infrastructure systems to improve reliability at scale.
 
-- 🔗 [LinkedIn](https://www.linkedin.com/in/caiofrnca)
-- 📍 Dublin, Ireland 
-
+- 🔗 [LinkedIn](https://www.linkedin.com/in/caiofrnca) ,📍 Dublin, Ireland 
 
 🚧 Portfolio Under continuous Construction 👨‍💻
 
