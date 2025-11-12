@@ -2,10 +2,10 @@
 layout: default
 ---
 
-#### I build reliable, automated networks. 5+ years in NOC/IT Ops (Meta via Astreya; PwC Ireland), now focused on large-scale routing, telemetry, and infra automation (Python). CompTIA Security+ certified.
+#### I build reliable, automated networks. 5+ years in NOC/IT Ops (Meta via Astreya; PwC Ireland), now focused on large-scale routing, telemetry, and infra automation (Python). 
 
-- 📍 Dublin, Ireland | 💼 Open to Network Production Engineer / NOC / NetOps / SRE-Network roles
 - 🔗 [LinkedIn](https://www.linkedin.com/in/caiofrnca)
+- 📍 Dublin, Ireland 
 
 
 🚧 Portfolio Under continuous Construction 👨‍💻
@@ -30,6 +30,7 @@ layout: default
 
 ### 1) Backbone-style BGP Lab (EVE-NG)
 **Goal:** emulate a mini backbone with route reflectors, graceful restart, and prefix-limit safety.
+
 **What I built:**  
 - Multi-ASN topology with RR, iBGP/eBGP, MED/local-pref policies  
 - Python script to push baseline configs and validate peering state (`netmiko`/`ncclient`)  
@@ -71,17 +72,9 @@ layout: default
 
 ---
 
-## Certifications
-
-- CompTIA Security+  
-- Google Cybersecurity Professional  
-- Let’sDefend — SOC Analyst Path
-
----
-
 ## Experience Snapshot
 
-- **NOC / IT Ops (5+ yrs):** incident response, provisioning, VLAN/IP planning, DNS updates, RMA processes  
+- **NOC / IT Ops (7+ yrs):** incident response, provisioning, VLAN/IP planning, DNS updates, RMA processes  
 - **Vendors/Tech:** Cisco (IOS/NX-OS), Juniper, Palo Alto; load balancers; Splunk, Zabbix, SolarWinds  
 - **Scripting:** Python for network tasks; git-based workflows and documentation
 
@@ -95,13 +88,7 @@ layout: default
 
 ---
 
-## Contact
-
-- Email: **caio.frn.ca@gmail.com**  
-- LinkedIn: **/in/caiofrnca**  
-- GitHub: **/caiofrnca**
-
-> I’m especially interested in rotational programs touching backbone, DC, and infra automation.
+> I’m excited by roles that allow me to collaborate across backbone, data center, and automation teams to improve global network reliability.
 
 
 ## 🤳 Connect with me:
