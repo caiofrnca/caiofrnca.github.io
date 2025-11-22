@@ -3,7 +3,7 @@
 <h1>Hi, I'm Caio! <br/><a href="https://www.linkedin.com/in/caiofranca/">Network Production Engineer</a></h1>
 
 I engineer networks that scale.
-5+ years in NOC/IT Ops (Meta via Astreya; PwC Ireland; RTM), now focused on large-scale routing, telemetry, and infra automation (Python).
+10+ years in Network Operations Centre / IT Operation (Meta via Astreya; PwC Ireland; RTM), now focused on large-scale security, routing, telemetry, and infra automation.
 
 ---
 
