@@ -2,7 +2,7 @@
 layout: default
 ---
 
-#### I engineer security networks that scale. 
+#### I engineer secure networks that scale. 
 #### 10+ years in Network Operations Centre / IT Operation (Meta via Astreya; PwC Ireland; RTM), now focused on large-scale security, routing, telemetry, and infra automation.
 
 - 📍 Dublin, Ireland,  🔗 [LinkedIn](https://www.linkedin.com/in/caiofrnca)
