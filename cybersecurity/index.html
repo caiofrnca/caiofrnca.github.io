@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Projects – Caio França</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
 
+<body>
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="/">Caio<span>França</span></a>
+      </div>
+      <nav class="main-nav" id="mainNav">
+        <a href="/">Home</a>
+        <a href="/cybersecurity/">Cybersecurity</a>
+        <a href="/networking/">Networking</a>
+        <a href="/cloud/">Cloud</a>
+        <a href="/ai/">AI &amp; Automation</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Cybersecurity Portfolio</h2>
+        <p class="section-intro">
+          A collection of hands-on labs, investigations, and security engineering work across
+          defensive security, detection, analysis, and foundational cloud security. These projects
+          reflect my ongoing development as a NetSecOps and security-focused engineer.
+        </p>
+
+        <!-- CYBERSECURITY PROJECT GRID -->
+        <div class="card-grid">
+
+          <!-- EXAMPLE PROJECT 1 -->
+          <a href="suricata-threat-detection.html" class="card">
+            <h3>Network Threat Detection with Suricata</h3>
+            <p>
+              Built and tuned Suricata rules, analysed malicious traffic, and documented incident
+              response workflows using real packet captures.
+            </p>
+            <ul class="tag-list">
+              <li>Suricata</li>
+              <li>IDS</li>
+              <li>Blue Team</li>
+            </ul>
+          </a>
+
+          <!-- EXAMPLE PROJECT 2 -->
+          <a href="wireshark-incident-analysis.html" class="card">
+            <h3>Wireshark-Based Incident Investigation</h3>
+            <p>
+              Investigated suspicious network traffic, identified anomalies, and validated attack
+              patterns through packet-level inspection.
+            </p>
+            <ul class="tag-list">
+              <li>Wireshark</li>
+              <li>PCAP</li>
+              <li>Incident Response</li>
+            </ul>
+          </a>
+
+          <!-- EXAMPLE PROJECT 3 -->
+          <a href="crypto-hashing-lab.html" class="card">
+            <h3>Cryptography & Hashing Analysis</h3>
+            <p>
+              Explored hashing algorithms, analysed encrypted messages, and validated integrity
+              mechanisms through practical cryptography exercises.
+            </p>
+            <ul class="tag-list">
+              <li>Crypto</li>
+              <li>Hashing</li>
+            </ul>
+          </a>
+
+          <!-- Add your real labs below -->
+          <!-- Example: -->
+          <!-- <a href="log-suricata.html" class="card"> ... </a> -->
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <span>© <span id="year"></span> Caio França</span>
+      <span>Cybersecurity Portfolio</span>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById('mainNav');
+      nav.classList.toggle('open');
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
