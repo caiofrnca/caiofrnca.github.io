@@ -1,1 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caio Ferreira – Cybersecurity & Network Engineer</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="/">Caio<span>FRN</span></a>
+      </div>
+      <nav class="main-nav" id="mainNav">
+        <a href="#about">About</a>
+        <a href="#areas">Focus Areas</a>
+        <a href="#featured">Featured Work</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/CV_Caio_Ferreira.pdf" target="_blank" class="btn-link">Download CV</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Cybersecurity • Networking • Cloud • AI</p>
+          <h1>Hi, I'm Caio – building secure, reliable and automated infrastructure.</h1>
+          <p class="hero-subtitle">
+            Network & Security engineer with hands-on experience in NOC, SOC labs, cloud
+            security, and AI-driven automation. This portfolio highlights real labs and
+            projects, not just certificates.
+          </p>
+          <div class="hero-actions">
+            <a href="#featured" class="btn primary">View featured projects</a>
+            <a href="#areas" class="btn ghost">Explore focus areas</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Current Focus</h2>
+          <ul>
+            <li>Blue team labs: SIEM, Suricata, Wireshark, malware analysis</li>
+            <li>Multi-vendor networking: Cisco, Juniper, EVE-NG</li>
+            <li>Cloud security & Zero Trust fundamentals</li>
+            <li>Python & AI for security automation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container two-column">
+        <div>
+          <h2>About me</h2>
+          <p>
+            I'm an IT professional with over 5 years of experience as a NOC engineer and
+            deployment analyst, now specialising in cybersecurity and network engineering.
+          </p>
+          <p>
+            My work combines <strong>network fundamentals</strong>, <strong>defensive security</strong>,
+            and <strong>automation</strong> to design resilient systems and respond to incidents
+            effectively.
+          </p>
+        </div>
+        <div class="pill-list">
+          <h3>Highlights</h3>
+          <ul>
+            <li>CompTIA Security+ certified</li>
+            <li>Hands-on SOC & blue team labs</li>
+            <li>Multi-vendor network simulations (EVE-NG)</li>
+            <li>Python automation & scripting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS AREAS -->
+    <section id="areas" class="section alt">
+      <div class="container">
+        <h2>Focus areas</h2>
+        <p class="section-intro">
+          Each area below links to a dedicated page with deep-dive labs, write-ups and projects.
+        </p>
+
+        <div class="card-grid">
+          <a href="cybersecurity/" class="card">
+            <h3>Cybersecurity</h3>
+            <p>
+              SOC investigations, SIEM use cases, Suricata, malware traffic analysis,
+              vulnerability management and GRC labs.
+            </p>
+            <span class="card-link">View cybersecurity projects →</span>
+          </a>
+
+          <a href="networking/" class="card">
+            <h3>Networking</h3>
+            <p>
+              BGP & routing labs, network design, Wireshark captures, Juniper & Cisco
+              configurations, and performance tuning.
+            </p>
+            <span class="card-link">View networking labs →</span>
+          </a>
+
+          <a href="cloud/" class="card">
+            <h3>Cloud & Infrastructure</h3>
+            <p>
+              Cloud security concepts, IAM, network segmentation, zero trust patterns and
+              infrastructure-as-code experiments.
+            </p>
+            <span class="card-link">View cloud projects →</span>
+          </a>
+
+          <a href="ai/" class="card">
+            <h3>AI & Automation</h3>
+            <p>
+              Python tools, AI-assisted analysis, log parsing, and proof-of-concept projects
+              using LLMs for security workflows.
+            </p>
+            <span class="card-link">View AI & automation →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS (you can update links later) -->
+    <section id="featured" class="section">
+      <div class="container">
+        <h2>Featured projects</h2>
+        <p class="section-intro">
+          A small selection of projects that represent how I think about security, reliability and automation.
+        </p>
+
+        <div class="card-grid">
+          <a href="cybersecurity/log-suricata.html" class="card">
+            <h3>Network Threat Detection with Suricata</h3>
+            <p>
+              Built and tuned Suricata rules to detect malicious traffic, analysed alerts and
+              documented incident response steps.
+            </p>
+            <ul class="tag-list">
+              <li>Suricata</li>
+              <li>IDS</li>
+              <li>Blue Team</li>
+            </ul>
+          </a>
+
+          <a href="networking/bgp-lab.html" class="card">
+            <h3>Multi-vendor BGP Lab on EVE-NG</h3>
+            <p>
+              Designed a service-provider style topology with Cisco & Juniper routers to
+              explore routing policies and resilience.
+            </p>
+            <ul class="tag-list">
+              <li>BGP</li>
+              <li>EVE-NG</li>
+              <li>Cisco &amp; Juniper</li>
+            </ul>
+          </a>
+
+          <a href="ai/log-assistant.html" class="card">
+            <h3>AI-Assisted Log Analysis Prototype</h3>
+            <p>
+              Prototype pipeline where Python and an LLM help triage noisy logs, surface
+              anomalies and support SOC investigations.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>LLM</li>
+              <li>Automation</li>
+            </ul>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container two-column">
+        <div>
+          <h2>Contact</h2>
+          <p>
+            Open to roles in cybersecurity, network engineering, cloud security and related
+            leadership tracks.
+          </p>
+          <p>
+            The best way to reach me is via email or LinkedIn. I'm happy to walk through any of
+            the labs or projects you see here.
+          </p>
+        </div>
+        <div class="pill-list">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="mailto:youremail@example.com">youremail@example.com</a></li>
+            <li><a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/caiofrnca" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <span>© <span id="year"></span> Caio Ferreira</span>
+      <span>Built with HTML &amp; CSS • Hosted on GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    function toggleNav() {
+      const nav = document.getElementById('mainNav');
+      nav.classList.toggle('open');
+    }
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
