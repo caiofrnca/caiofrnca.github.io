@@ -7,7 +7,7 @@ layout: default
 
 - 📍 Dublin, Ireland,  🔗 [LinkedIn](https://www.linkedin.com/in/caiofrnca)
 
-🚧 Portfolio Under continuous Construction 👨‍💻
+🚧 Portfolio Under continuous Construction! 👨‍💻
 
 ## 🎓 Certifications:
 
