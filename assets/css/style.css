@@ -238,13 +238,23 @@ html, body {
    LIGHTBOX GALLERY
    ============================ */
 
+/* LIGHTBOX GALLERY – COMPACT GRID */
 .lightbox-gallery {
   display: grid;
   gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.lightbox-gallery img {
+/* Thumbnails */
+.lightbox-gallery .lab-img {
+  width: 100%;
+  max-height: 220px;         /* height of thumbnails */
+  object-fit: cover;         /* crops a bit but keeps aspect ratio nice */
+  margin: 0;                 /* remove big vertical spacing */
   cursor: zoom-in;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Overlay container */
