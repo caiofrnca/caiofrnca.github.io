@@ -157,89 +157,39 @@
         </article>
 
         <!-- SNAPSHOTS -->
-<article class="card">
-  <h2>Snapshots</h2>
-  <p>
-    Selected screenshots from the investigation show the SOC queue, case workflow, and phishing playbook used to structure the response.
-  </p>
 
-  <img src="../assets/img/cybersecurity/siem/1.png"
-       alt="Screenshot 1"
-       class="lab-img" />
+            <article class="card">
+              <h2>Snapshots</h2>
+              <p>
+                Selected screenshots from the investigation show the SOC queue, case workflow,
+                and phishing playbook used to structure the response.
+              </p>
 
-  <img src="../assets/img/cybersecurity/siem/2.jpg"
-       alt="Screenshot 2"
-       class="lab-img" />
+              <div class="lightbox-gallery">
+                <img src="../assets/img/cybersecurity/siem/1.png"
+                    alt="LetsDefend alert queue with phishing and brute-force alerts"
+                    class="lab-img"
+                    loading="lazy" />
 
-  <img src="../assets/img/cybersecurity/siem/3.jpg"
-       alt="Screenshot 3"
-       class="lab-img" />
+                <img src="../assets/img/cybersecurity/siem/2.jpg"
+                    alt="Phishing alert details and investigation context"
+                    class="lab-img"
+                    loading="lazy" />
 
-  <img src="../assets/img/cybersecurity/siem/4.png"
-       alt="Screenshot 4"
-       class="lab-img" />
+                <img src="../assets/img/cybersecurity/siem/3.jpg"
+                    alt="Phishing playbook and structured analysis workflow"
+                    class="lab-img"
+                    loading="lazy" />
 
-  <img src="../assets/img/cybersecurity/siem/5.png"
-       alt="Screenshot 5"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/6.png"
-       alt="Screenshot 6"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/7.png"
-       alt="Screenshot 7"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/8.png"
-       alt="Screenshot 8"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/9.png"
-       alt="Screenshot 9"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/10.png"
-       alt="Screenshot 10"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/11.png"
-       alt="Screenshot 11"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/12.png"
-       alt="Screenshot 12"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/13.png"
-       alt="Screenshot 13"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/14.png"
-       alt="Screenshot 14"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/15.png"
-       alt="Screenshot 15"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/16.png"
-       alt="Screenshot 16"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/17.png"
-       alt="Screenshot 17"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/18.png"
-       alt="Screenshot 18"
-       class="lab-img" />
-
-  <img src="../assets/img/cybersecurity/siem/19.png"
-       alt="Screenshot 19"
-       class="lab-img" />
-
-</article>
+                <!-- add more if you want -->
+                <!--
+                <img src="../assets/img/cybersecurity/siem/4.png"
+                    alt="Example screenshot"
+                    class="lab-img"
+                    loading="lazy" />
+                -->
+              </div>
+            </article>
 
 
         <!-- BACK LINK -->
@@ -259,12 +209,95 @@
     </div>
   </footer>
 
-  <script>
-    function toggleNav() {
-      const nav = document.getElementById('mainNav');
+<script>
+  // Mobile nav toggle
+  function toggleNav() {
+    const nav = document.getElementById('mainNav');
+    if (nav) {
       nav.classList.toggle('open');
     }
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  }
+
+  // Dynamic year in footer
+  const yearEl = document.getElementById('year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  // ============================
+  // LIGHTBOX GALLERY LOGIC
+  // ============================
+  (function () {
+    const images = document.querySelectorAll('.lightbox-gallery img');
+    if (!images.length) return;
+
+    let currentIndex = 0;
+
+    // Create overlay once, reuse for all images
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = `
+      <div class="lightbox-inner">
+        <div class="lightbox-img-wrapper">
+          <img class="lightbox-img" src="" alt="">
+        </div>
+        <div class="lightbox-caption"></div>
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous">&#8249;</button>
+        <button class="lightbox-next" aria-label="Next">&#8250;</button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const imgEl = overlay.querySelector('.lightbox-img');
+    const captionEl = overlay.querySelector('.lightbox-caption');
+    const btnClose = overlay.querySelector('.lightbox-close');
+    const btnPrev = overlay.querySelector('.lightbox-prev');
+    const btnNext = overlay.querySelector('.lightbox-next');
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const img = images[currentIndex];
+      imgEl.src = img.src;
+      imgEl.alt = img.alt || '';
+      captionEl.textContent = img.alt || '';
+      overlay.classList.add('open');
+    }
+
+    function closeLightbox() {
+      overlay.classList.remove('open');
+    }
+
+    function showNext(delta) {
+      currentIndex = (currentIndex + delta + images.length) % images.length;
+      openLightbox(currentIndex);
+    }
+
+    images.forEach((img, index) => {
+      img.addEventListener('click', () => openLightbox(index));
+    });
+
+    btnClose.addEventListener('click', closeLightbox);
+    btnPrev.addEventListener('click', () => showNext(-1));
+    btnNext.addEventListener('click', () => showNext(1));
+
+    // Close when clicking outside the image
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        closeLightbox();
+      }
+    });
+
+    // Keyboard support
+    document.addEventListener('keydown', (e) => {
+      if (!overlay.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') showNext(1);
+      if (e.key === 'ArrowLeft') showNext(-1);
+    });
+  })();
+</script>
+
+
 </body>
 </html>
