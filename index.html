@@ -98,6 +98,113 @@
       </div>
     </section>
 
+    <a href="#platform">Platform</a>
+
+    <!-- PLATFORM (Private Cloud Platform) -->
+<section id="platform" class="section alt">
+  <div class="container">
+    <h2>Private Cloud Platform | UM790 Build</h2>
+
+    <p class="section-intro">
+      A security-first, AI-ready home server platform built on Proxmox + pfSense. Documented end-to-end with
+      network-as-code, phased milestones, and operational runbooks — engineered like a real production environment.
+    </p>
+
+    <div class="card-grid">
+
+      <!-- Main platform card -->
+      <a href="https://github.com/caiofrnca/private-cloud-platform"
+         class="card"
+         target="_blank"
+         rel="noopener noreferrer">
+        <h3>private-cloud-platform</h3>
+
+        <p>
+          Current phase: <strong>Foundation + Networking</strong>. Proxmox VE installed, pfSense 2.7.2 deployed,
+          and VLAN segmentation &amp; firewall policy design in progress. This repo tracks architecture decisions,
+          build steps, diagrams, and validation checklists.
+        </p>
+
+        <ul class="tag-list">
+          <li>Proxmox</li>
+          <li>pfSense</li>
+          <li>VLAN Segmentation</li>
+          <li>Network-as-Code</li>
+          <li>Platform Engineering</li>
+        </ul>
+
+        <span class="card-link">View repository on GitHub →</span>
+      </a>
+
+      <!-- Live build log card -->
+      <div class="card" id="pcloudCard" role="region" aria-label="Private Cloud Platform build log">
+        <h3>Live build log</h3>
+
+        <p id="pcloudMeta">
+          Loading latest updates from GitHub…
+        </p>
+
+        <ul id="pcloudCommits" class="tag-list" aria-label="Latest commits"></ul>
+
+        <a id="pcloudLink"
+           href="#"
+           class="card-link"
+           target="_blank"
+           rel="noopener noreferrer">
+          View latest commits →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  (async () => {
+    const owner = "caiofrnca";
+    const repo = "private-cloud-platform";
+
+    try {
+      const repoRes = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+      if (!repoRes.ok) throw new Error("Repo fetch failed");
+      const repoData = await repoRes.json();
+
+      const commitsRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=3`);
+      if (!commitsRes.ok) throw new Error("Commits fetch failed");
+      const commits = await commitsRes.json();
+
+      const updated = new Date(repoData.updated_at).toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "2-digit"
+      });
+
+      document.getElementById("pcloudMeta").textContent =
+        `Updated: ${updated} • ⭐ ${repoData.stargazers_count} • ${repoData.description || "UM790 private cloud platform"}`;
+
+      const ul = document.getElementById("pcloudCommits");
+      ul.innerHTML = "";
+
+      commits.forEach(c => {
+        const msg = (c.commit && c.commit.message) ? c.commit.message.split("\n")[0] : "Commit";
+        const li = document.createElement("li");
+        li.textContent = msg.length > 64 ? msg.slice(0, 61) + "…" : msg;
+        ul.appendChild(li);
+      });
+
+      const link = document.getElementById("pcloudLink");
+      link.href = `${repoData.html_url}/commits/main`;
+    } catch (e) {
+      document.getElementById("pcloudMeta").textContent =
+        "Unable to load live updates right now. View the project on GitHub.";
+      document.getElementById("pcloudCommits").innerHTML = "";
+
+      const link = document.getElementById("pcloudLink");
+      link.href = `https://github.com/caiofrnca/private-cloud-platform`;
+      link.textContent = "Open repository →";
+    }
+  })();
+</script>
+
     <!-- AWS SAA-C03 -->
     <section id="saa" class="section alt">
       <div class="container">
