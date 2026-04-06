@@ -62,9 +62,9 @@
           <h1>Hi, I'm Caio! Building secure, reliable and automated hybrid infrastructure.</h1>
 
           <p class="hero-subtitle">
-            Network & Security engineer with hands-on experience in NOC operations, security labs, and cloud
-            infrastructure.
-            This portfolio presents practical projects and documented learning, not just certifications.
+            Network &amp; Security engineer with hands-on experience in operations, enterprise networking labs,
+            cloud architecture, and automation. This portfolio presents practical projects, validation-driven
+            labs, and documented learning, not just certifications.
           </p>
 
           <div class="hero-actions">
@@ -76,9 +76,11 @@
         <div class="hero-card">
           <h2>Current Focus</h2>
           <ul>
+            <li>
+            <li>Enterprise network lab in EVE-NG: OSPF, HSRP, LACP, failover testing, and Netmiko validation</li>
+            </li>
             <li>Private Cloud Platform: Proxmox + pfSense segmentation (live build)</li>
             <li>AWS SAA-C03: architecture design (IAM, VPC, HA/DR, secure patterns)</li>
-            <li>Network segmentation & multi-vendor routing (Cisco, Juniper)</li>
             <li>Automation & AI-assisted infrastructure engineering</li>
           </ul>
         </div>
@@ -122,6 +124,18 @@
 
         <div class="card-grid">
 
+          <!-- Networking -->
+          <a href="https://github.com/caiofrnca/enterprise-network" class="card" target="_blank"
+            rel="noopener noreferrer">
+            <h3>Networking</h3>
+            <p>
+              Enterprise network lab built in EVE-NG featuring Core, Distribution, and Access layers,
+              OSPF routing, HSRP gateway redundancy, LACP uplinks, failure testing, and Python-based
+              validation with Netmiko.
+            </p>
+            <span class="card-link">View networking lab →</span>
+          </a>
+
           <!-- Private Cloud Platform -->
           <a href="https://github.com/caiofrnca/private-cloud-platform" class="card" target="_blank"
             rel="noopener noreferrer">
@@ -144,15 +158,6 @@
             <span class="card-link">View cloud projects →</span>
           </a>
 
-          <!-- Networking -->
-          <a href="under-construction.html" class="card">
-            <h3>Networking</h3>
-            <p>
-              Multi-vendor routing labs including BGP simulations, network design,
-              protocol analysis, and troubleshooting across Cisco and Juniper platforms.
-            </p>
-            <span class="card-link">View networking labs →</span>
-          </a>
 
           <!-- Cybersecurity -->
           <a href="under-construction.html" class="card">
@@ -218,16 +223,20 @@
             </ul>
           </a>
 
-          <a href="networking/bgp-lab.html" class="card">
-            <h3>Multi-vendor BGP Lab on EVE-NG</h3>
+          <a href="https://github.com/caiofrnca/enterprise-network" class="card" target="_blank"
+            rel="noopener noreferrer">
+            <h3>Enterprise Network Lab on EVE-NG</h3>
             <p>
-              Designed a service-provider style topology with Cisco &amp; Juniper routers to
-              explore routing policies and resilience.
+              Designed and documented a multi-layer enterprise network with Core, Distribution, and Access
+              topology, including OSPF, HSRP, VLAN segmentation, LACP redundancy, failure testing, and
+              Python Netmiko-based validation for operational health checks.
             </p>
             <ul class="tag-list">
-              <li>BGP</li>
               <li>EVE-NG</li>
-              <li>Cisco &amp; Juniper</li>
+              <li>OSPF</li>
+              <li>HSRP</li>
+              <li>LACP</li>
+              <li>Netmiko</li>
             </ul>
           </a>
 
@@ -265,9 +274,11 @@
             <h3>private-cloud-platform</h3>
 
             <p>
-              Current phase: <strong>Core Services + Applications (v0.4 complete)</strong> with <strong>Observability (v0.5) in
+              Current phase: <strong>Core Services + Applications (v0.4 complete)</strong> with <strong>Observability
+                (v0.5) in
                 progress</strong>.
-              The platform includes Proxmox + pfSense VLAN segmentation (10.200.0.0/16), internal PKI (Root CA + Step-CA + ACME),
+              The platform includes Proxmox + pfSense VLAN segmentation (10.200.0.0/16), internal PKI (Root CA + Step-CA
+              + ACME),
               Traefik ingress with automated TLS, and OpenClaw published behind secure HTTPS with WebSocket support.
             </p>
 
